@@ -23065,3 +23065,511 @@ Le module `cryptography` offre des fonctions pour gérer les clés cryptographiq
 - **Fonctions cryptographiques spécifiques**: Le module `cryptography` fournit des outils pour le hachage, le chiffrement symétrique et la gestion des clés.
 
 Pour des opérations de base comme la conversion de types de données, vous utiliserez principalement les fonctionnalités intégrées de Python. Les fonctions cryptographiques avancées sont gérées par le module `cryptography`.
+Voici une description détaillée de termes clés liés aux réseaux informatiques :
+
+### 1. **Adresse IP (Internet Protocol Address)**
+   - **Description**: Une adresse numérique unique assignée à chaque appareil connecté à un réseau, permettant de l'identifier et de le localiser. Il existe deux versions : IPv4 (32 bits, par exemple `192.168.0.1`) et IPv6 (128 bits, par exemple `2001:db8::1`).
+   - **Utilisation**: Permet l'acheminement des paquets de données entre les appareils sur un réseau ou sur Internet.
+
+### 2. **DNS (Domain Name System)**
+   - **Description**: Un système de noms hiérarchique qui traduit les noms de domaine en adresses IP. Par exemple, `www.example.com` est traduit en `93.184.216.34`.
+   - **Fonctionnement**: Lorsqu'un utilisateur entre un nom de domaine dans un navigateur, le DNS convertit ce nom en une adresse IP que les ordinateurs peuvent utiliser pour localiser le site Web.
+
+### 3. **HTTP (HyperText Transfer Protocol)**
+   - **Description**: Un protocole de communication utilisé pour la transmission de données sur le Web. HTTP est sans état (stateless) et fonctionne sur le modèle client-serveur.
+   - **Exemple**: Lorsqu'un utilisateur demande une page Web, le navigateur utilise HTTP pour demander le contenu du serveur.
+
+### 4. **HTTPS (HyperText Transfer Protocol Secure)**
+   - **Description**: Une version sécurisée de HTTP utilisant le chiffrement TLS/SSL pour sécuriser les communications entre un navigateur et un serveur Web.
+   - **Fonction**: Chiffre les données échangées pour protéger contre les écoutes et les modifications.
+
+### 5. **TCP (Transmission Control Protocol)**
+   - **Description**: Un protocole de communication fiable qui assure la livraison correcte et dans l'ordre des paquets de données entre deux points sur un réseau.
+   - **Fonctionnement**: Établit une connexion, gère le flux de données et assure la retransmission des paquets perdus.
+
+### 6. **UDP (User Datagram Protocol)**
+   - **Description**: Un protocole de communication sans connexion qui permet la transmission rapide de paquets de données sans garantir leur livraison ou leur ordre.
+   - **Utilisation**: Idéal pour les applications en temps réel comme les jeux en ligne et le streaming vidéo, où la vitesse est cruciale.
+
+### 7. **Router (Routeur)**
+   - **Description**: Un dispositif réseau qui dirige le trafic entre différents réseaux, comme entre un réseau local (LAN) et Internet. Il choisit le meilleur chemin pour les paquets de données.
+   - **Fonction**: Connecte et gère les réseaux en dirigeant le trafic en fonction des adresses IP.
+
+### 8. **Switch (Commutateur)**
+   - **Description**: Un dispositif réseau qui connecte plusieurs appareils au sein d'un même réseau local (LAN) et dirige les paquets de données uniquement vers le destinataire prévu.
+   - **Fonction**: Permet la communication efficace entre les appareils d'un LAN en réduisant les collisions et en améliorant les performances.
+
+### 9. **Firewall (Pare-feu)**
+   - **Description**: Un dispositif ou logiciel de sécurité qui surveille et contrôle le trafic réseau en fonction de règles de sécurité définies pour protéger les réseaux contre les accès non autorisés.
+   - **Fonction**: Bloque ou autorise le trafic entrant et sortant basé sur des règles prédéfinies.
+
+### 10. **LAN (Local Area Network)**
+   - **Description**: Un réseau qui couvre une zone géographique limitée, comme une maison ou un bureau, permettant aux appareils de communiquer à haute vitesse.
+   - **Exemple**: Un réseau Wi-Fi domestique ou un réseau d'entreprise dans un bâtiment.
+
+### 11. **WAN (Wide Area Network)**
+   - **Description**: Un réseau couvrant une vaste zone géographique, souvent pour connecter plusieurs LAN. Le plus grand WAN est Internet.
+   - **Fonction**: Permet la communication sur de longues distances entre réseaux disparates.
+
+### 12. **Subnet (Subnetwork)**
+   - **Description**: Une subdivision d'un réseau IP en segments plus petits pour améliorer la gestion du trafic et la sécurité. Utilisé pour organiser des réseaux plus grands en parties plus gérables.
+   - **Exemple**: Diviser un réseau d'entreprise en sous-réseaux pour différents départements, comme le marketing et le développement.
+
+### 13. **MAC Address (Media Access Control Address)**
+   - **Description**: Une adresse physique unique assignée à chaque interface réseau pour l'identification au niveau de la couche de liaison de données.
+   - **Exemple**: `00:1A:2B:3C:4D:5E`, utilisée pour identifier les appareils dans un réseau local.
+
+### 14. **Protocol**
+   - **Description**: Un ensemble de règles qui définissent comment les données sont formatées, transmises et reçues sur un réseau. Les protocoles assurent l'interopérabilité entre différents appareils et systèmes.
+   - **Exemple**: HTTP, TCP, UDP, FTP, SMTP.
+
+### 15. **IP Address**
+   - **Description**: Une adresse numérique assignée à chaque appareil sur un réseau pour l'identifier et permettre la communication. Les adresses IP peuvent être publiques (accessibles depuis Internet) ou privées (utilisées à l'intérieur d'un réseau local).
+   - **Exemple**: `192.168.1.1` (privée), `8.8.8.8` (publique, Google DNS).
+
+### 16. **Gateway (Passerelle)**
+   - **Description**: Un dispositif ou logiciel qui connecte un réseau local à un réseau externe (comme Internet) et gère le transfert des données entre eux.
+   - **Fonction**: Permet la communication entre différents réseaux utilisant des protocoles différents.
+
+### 17. **Bandwidth (Bande Passante)**
+   - **Description**: La capacité maximale de transfert de données d'un réseau ou d'une connexion, mesurée en bits par seconde (bps) ou en multiples de cette unité (Kbps, Mbps, Gbps).
+   - **Exemple**: Une connexion fibre optique avec une bande passante de 1 Gbps.
+
+### 18. **Latency (Latence)**
+   - **Description**: Le délai entre l'envoi d'une demande et la réception de la réponse, mesuré en millisecondes (ms). La latence est cruciale pour les applications en temps réel comme les jeux en ligne.
+   - **Exemple**: La latence de 50 ms pour une connexion Internet, indiquant le temps nécessaire pour que les données fassent un aller-retour entre l'utilisateur et le serveur.
+
+### 19. **Packet (Paquet)**
+   - **Description**: Une unité de données transmise sur un réseau. Un paquet contient à la fois les données à transmettre et les informations de contrôle pour assurer la livraison correcte.
+   - **Exemple**: Un email ou un fichier divisé en plusieurs paquets pour être envoyé sur Internet.
+
+### 20. **VPN (Virtual Private Network)**
+   - **Description**: Un service qui crée un tunnel sécurisé pour la transmission de données sur un réseau public, en chiffrant les données pour protéger la confidentialité et la sécurité.
+   - **Utilisation**: Permet aux utilisateurs d'accéder à des ressources internes d'une entreprise depuis l'extérieur, tout en protégeant les données contre les interceptions.
+
+### 21. **NAT (Network Address Translation)**
+   - **Description**: Un mécanisme qui traduit les adresses IP privées des appareils sur un réseau local en une adresse IP publique pour accéder à Internet, et inversement.
+   - **Fonction**: Permet à plusieurs appareils d'utiliser une seule adresse IP publique pour se connecter à Internet.
+
+### 22. **DHCP (Dynamic Host Configuration Protocol)**
+   - **Description**: Un protocole qui attribue automatiquement des adresses IP et d'autres paramètres de configuration aux appareils sur un réseau, simplifiant la gestion des adresses IP.
+   - **Exemple**: Un serveur DHCP dans un réseau d'entreprise attribue des adresses IP aux ordinateurs à leur connexion.
+
+### 23. **QoS (Quality of Service)**
+   - **Description**: Un ensemble de techniques utilisées pour gérer le trafic réseau et garantir des performances spécifiques pour certaines applications ou types de données en priorisant le trafic important.
+   - **Exemple**: Prioriser le trafic VoIP pour assurer des appels de haute qualité, même lorsque le réseau est congestionné.
+
+### 24. **SSID (Service Set Identifier)**
+   - **Description**: Un nom unique attribué à un réseau Wi-Fi pour permettre aux appareils de se connecter à ce réseau spécifique.
+   - **Exemple**: `HomeNetwork123`, le nom affiché lorsque vous recherchez des réseaux Wi-Fi disponibles.
+
+### 25. **Topology (Topologie)**
+   - **Description**: La configuration physique ou logique des dispositifs sur un réseau, déterminant comment ils sont connectés et communiquent entre eux.
+   - **Exemple**: Topologie en étoile, où tous les dispositifs sont connectés à un switch central, ou topologie en bus, où tous les dispositifs sont connectés à un câble principal.
+
+Ces termes couvrent un large éventail de concepts essentiels en réseaux informatiques, chacun jouant un rôle crucial dans le fonctionnement, la gestion et la sécurité des réseaux modernes.
+Le calcul binaire est basé sur un système numérique utilisant uniquement deux chiffres : 0 et 1. Les règles de calcul binaire sont semblables à celles des mathématiques décimales mais adaptées pour le système binaire. Voici les règles et les méthodes essentielles pour le calcul binaire :
+
+### 1. **Addition Binaire**
+
+L'addition binaire suit les mêmes principes que l'addition décimale mais avec des règles adaptées au système binaire.
+
+| A | B | A + B | Note   |
+|---|---|-------|--------|
+| 0 | 0 | 0     | Pas de retenue. |
+| 0 | 1 | 1     | Pas de retenue. |
+| 1 | 0 | 1     | Pas de retenue. |
+| 1 | 1 | 10    | Retenue de 1 (1 + 1 = 10 en binaire). |
+
+**Exemple :**
+
+```
+   1010
++  1101
+---------
+  10111
+```
+
+### 2. **Soustraction Binaire**
+
+La soustraction binaire utilise des emprunts de manière similaire à la soustraction décimale.
+
+| A | B | A - B | Note   |
+|---|---|-------|--------|
+| 0 | 0 | 0     | Pas d'emprunt. |
+| 0 | 1 | 1     | Emprunt nécessaire. |
+| 1 | 0 | 1     | Pas d'emprunt. |
+| 1 | 1 | 0     | Pas d'emprunt. |
+
+**Exemple :**
+
+```
+  1010
+-  0110
+---------
+  0100
+```
+
+### 3. **Multiplication Binaire**
+
+La multiplication binaire est similaire à la multiplication décimale mais plus simple en raison de la base 2.
+
+| A | B | A * B | Note   |
+|---|---|-------|--------|
+| 0 | 0 | 0     | Pas de produit. |
+| 0 | 1 | 0     | Multiplication par 0. |
+| 1 | 0 | 0     | Multiplication par 0. |
+| 1 | 1 | 1     | Produit direct. |
+
+**Exemple :**
+
+```
+   101 (5 en décimal)
+×  11 (3 en décimal)
+---------
+   101
++ 1010
+---------
+ 1111 (15 en décimal)
+```
+
+### 4. **Division Binaire**
+
+La division binaire suit un processus similaire à la division décimale, mais avec des valeurs limitées à 0 et 1.
+
+**Exemple :**
+
+```
+  1101 (13 en décimal)
+÷  11 (3 en décimal)
+---------
+  0011 (Résultat : 4 avec un reste de 01)
+```
+
+### 5. **Complément à 1**
+
+Le complément à 1 d'un nombre binaire est obtenu en inversant tous les bits (0 devient 1 et 1 devient 0).
+
+**Exemple :**
+
+```
+Nombre binaire : 1010
+Complément à 1 : 0101
+```
+
+### 6. **Complément à 2**
+
+Le complément à 2 est utilisé pour représenter les nombres négatifs en binaire. Il est calculé en inversant tous les bits (complément à 1) et en ajoutant 1.
+
+**Exemple :**
+
+```
+Nombre binaire : 1010
+Complément à 1 : 0101
+Ajouter 1         : 0110
+Complément à 2   : 0110
+```
+
+### 7. **Opérations Logiques**
+
+Les opérations logiques de base en binaire incluent :
+
+- **ET (AND)** : Le résultat est 1 seulement si les deux bits sont 1.
+  
+  | A | B | A AND B |
+  |---|---|---------|
+  | 0 | 0 | 0       |
+  | 0 | 1 | 0       |
+  | 1 | 0 | 0       |
+  | 1 | 1 | 1       |
+
+- **OU (OR)** : Le résultat est 1 si au moins un des bits est 1.
+  
+  | A | B | A OR B  |
+  |---|---|---------|
+  | 0 | 0 | 0       |
+  | 0 | 1 | 1       |
+  | 1 | 0 | 1       |
+  | 1 | 1 | 1       |
+
+- **NON (NOT)** : Inverse tous les bits (0 devient 1 et 1 devient 0).
+
+  | A | NOT A |
+  |---|-------|
+  | 0 | 1     |
+  | 1 | 0     |
+
+- **XOR (Exclusive OR)** : Le résultat est 1 si les bits sont différents.
+  
+  | A | B | A XOR B |
+  |---|---|---------|
+  | 0 | 0 | 0       |
+  | 0 | 1 | 1       |
+  | 1 | 0 | 1       |
+  | 1 | 1 | 0       |
+
+### 8. **Shifting (Décalage)**
+
+Les opérations de décalage déplacent les bits vers la gauche ou vers la droite.
+
+- **Décalage à gauche (<<)** : Déplace tous les bits vers la gauche, ajoutant des zéros à droite.
+
+  | A   | A << 1 |
+  |-----|--------|
+  |  101 | 1010   |
+
+- **Décalage à droite (>>)** : Déplace tous les bits vers la droite, supprimant les bits les plus à droite.
+
+  | A   | A >> 1 |
+  |-----|--------|
+  |  101 | 010    |
+
+### 9. **Calculs Avancés**
+
+- **Addition de Nombres avec Retenue**: Lorsqu'il y a une retenue dans une addition, ajoutez 1 à la colonne suivante.
+  
+  **Exemple :**
+
+  ```
+     1110
+   + 1101
+   ------
+  11011
+  ```
+
+- **Soustraction avec Emprunt**: Emprunter d'une colonne supérieure lorsque le bit supérieur est plus petit que le bit inférieur.
+
+  **Exemple :**
+
+  ```
+    1000
+   - 0011
+   ------
+    01101
+  ```
+
+Ces règles de calcul binaire sont fondamentales pour comprendre et travailler avec les systèmes numériques, les circuits informatiques, et les algorithmes de traitement de données.
+Pour concevoir un circuit complet pour des opérations binaires en utilisant les portes logiques de base, nous devons aborder plusieurs opérations arithmétiques fondamentales : addition, soustraction, multiplication et division. Voici une description détaillée de chaque circuit binaire avec les portes logiques nécessaires.
+
+### **1. Additionneur Complet (Full Adder)**
+
+L'additionneur complet permet d'ajouter deux bits avec une retenue d'entrée pour produire une somme et une retenue de sortie.
+
+**Composants Utilisés:**
+- **XOR** (2 portes)
+- **AND** (2 portes)
+- **OR** (1 porte)
+- **NOT** (aucune porte pour cet exemple)
+
+**Table de Vérité**:
+
+| A | B | Cin | Sum | Cout |
+|---|---|-----|-----|------|
+| 0 | 0 |  0  |  0  |   0  |
+| 0 | 0 |  1  |  1  |   0  |
+| 0 | 1 |  0  |  1  |   0  |
+| 0 | 1 |  1  |  0  |   1  |
+| 1 | 0 |  0  |  1  |   0  |
+| 1 | 0 |  1  |  0  |   1  |
+| 1 | 1 |  0  |  0  |   1  |
+| 1 | 1 |  1  |  1  |   1  |
+
+**Schéma du Circuit**:
+
+```
+        A -----|
+               XOR ----|
+        B -----|      XOR ----> Sum
+                      |
+       Cin ---------|
+                     |
+      A ----|        |
+            AND ----|  
+      B ----|        |    
+                     OR ----> Cout
+      Cin ---|        
+            AND ----|
+      A  ----| 
+            XOR ----|
+      B  ----|       
+```
+
+### **2. Soustracteur Complet (Full Subtractor)**
+
+Le soustracteur complet permet de soustraire deux bits avec un emprunt d'entrée pour produire une différence et un emprunt de sortie.
+
+**Composants Utilisés:**
+- **XOR** (2 portes)
+- **AND** (2 portes)
+- **OR** (2 portes)
+- **NOT** (1 porte pour inverser l'entrée B)
+
+**Table de Vérité**:
+
+| A | B | Bin | Diff | Bout |
+|---|---|-----|------|------|
+| 0 | 0 |  0  |  0   |  0   |
+| 0 | 0 |  1  |  1   |  1   |
+| 0 | 1 |  0  |  1   |  1   |
+| 0 | 1 |  1  |  0   |  1   |
+| 1 | 0 |  0  |  1   |  0   |
+| 1 | 0 |  1  |  0   |  0   |
+| 1 | 1 |  0  |  0   |  0   |
+| 1 | 1 |  1  |  1   |  1   |
+
+**Schéma du Circuit**:
+
+```
+        A -----|
+               XOR ----|
+        B ----|      XOR ----> Diff
+                   |
+       Bin -------|
+                    |
+      A ----|        |
+            AND ----|
+      B ----|        |    
+                    OR ----> Bout
+      Bin ---|        
+            AND ----|
+      A  ----| 
+            XOR ----|
+      B  ----|       
+```
+
+### **3. Multiplicateur Binaire**
+
+Le multiplicateur binaire est plus complexe et utilise des portes logiques pour multiplier deux nombres binaires.
+
+**Composants Utilisés:**
+- **AND** (pour chaque bit de multiplication)
+- **XOR** (pour additionner les résultats partiels)
+- **OR** (pour combiner les résultats)
+
+**Exemple pour Multiplication de 2 Bits**:
+
+Pour multiplier `A` et `B`, chaque bit de `A` est multiplié par chaque bit de `B` et les résultats partiels sont additionnés.
+
+**Table de Vérité** (pour multiplication de 2 bits) :
+
+| A | B | Product |
+|---|---|---------|
+| 0 | 0 |    0    |
+| 0 | 1 |    0    |
+| 1 | 0 |    0    |
+| 1 | 1 |    1    |
+
+**Schéma du Circuit** (Multiplicateur de 2 bits):
+
+```
+     A0 -----|       B0 ----| AND ----|
+             |                  |       |
+     A1 -----|       B1 ----| AND ----| SUM
+                                |       |
+                      |----| OR -----|
+     A0 -----|       B1 ----| AND ----| 
+             |                  |       |
+     A1 -----|       B0 ----| AND ----| 
+```
+
+### **4. Diviseur Binaire**
+
+La division binaire est un processus plus complexe qui utilise des opérations de soustraction répétée.
+
+**Composants Utilisés:**
+- **Soustracteurs Complets** (pour la soustraction)
+- **Shifters** (pour décaler les bits)
+
+**Exemple pour Division de 2 Bits**:
+
+Pour diviser un nombre binaire par un autre, vous effectuez des soustractions répétées et ajustez les bits de quotient et de reste.
+
+**Table de Vérité** (pour division de 2 bits) :
+
+La table de vérité complète pour une division de 2 bits nécessiterait une logique plus complexe que celle présentée ici.
+
+### **Résumé des Circuits Logiques**
+
+- **Additionneur Complet** : Utilisé pour ajouter deux bits avec une retenue.
+- **Soustracteur Complet** : Utilisé pour soustraire deux bits avec un emprunt.
+- **Multiplicateur Binaire** : Multiplie les bits en combinant les résultats partiels.
+- **Diviseur Binaire** : Réalise la division en utilisant des soustractions répétées.
+
+Ces circuits sont essentiels pour la réalisation d'opérations arithmétiques binaires dans des systèmes numériques. Ils peuvent être combinés et étendus pour créer des unités arithmétiques plus complexes comme les unités arithmétiques et logiques (ALU) dans les processeurs.
+Un **comparateur binaire en série** est un circuit utilisé pour comparer deux nombres binaires et déterminer leur égalité ou leur ordre. Il est souvent utilisé pour des opérations comme la vérification de conditions dans les circuits numériques.
+
+### **1. Description du Comparateur Binaire en Série**
+
+Un comparateur binaire en série compare les bits de deux nombres binaires de manière séquentielle, en partant du bit le plus significatif (MSB) au bit le moins significatif (LSB). Il produit généralement trois résultats :
+- **A > B** : Si le premier nombre est supérieur au second.
+- **A < B** : Si le premier nombre est inférieur au second.
+- **A = B** : Si les deux nombres sont égaux.
+
+### **2. Composants Utilisés**
+
+Pour concevoir un comparateur binaire en série, nous utilisons des portes logiques de base :
+- **XOR** (pour détecter les différences entre les bits)
+- **AND** (pour combiner les résultats des comparaisons de bits)
+- **OR** (pour combiner les résultats des conditions de comparaison)
+- **NOT** (pour inverser les bits)
+
+### **3. Schéma du Comparateur Binaire en Série**
+
+Pour simplifier, prenons un comparateur de 2 bits. Les nombres à comparer seront `A = A1 A0` et `B = B1 B0`, où `A1` et `A0` sont les bits du premier nombre et `B1` et `B0` sont les bits du second nombre.
+
+**1. Comparaison des Bits Moins Significatifs (A0 et B0)**
+
+- **Égalité (E0)**:
+  - **E0 = (A0 XOR B0) NOT**
+- **Différence (D0)**:
+  - **D0 = A0 XOR B0**
+
+**2. Comparaison des Bits Plus Significatifs (A1 et B1) en tenant compte des résultats de la comparaison des bits moins significatifs**
+
+- **Égalité (E1)**:
+  - **E1 = (A1 XOR B1) NOT**
+- **Différence (D1)**:
+  - **D1 = A1 XOR B1**
+
+**3. Détermination des Résultats Totaux**
+
+- **A > B**:
+  - **(A1 AND NOT B1) OR (E1 AND (A0 AND NOT B0))**
+- **A < B**:
+  - **(B1 AND NOT A1) OR (E1 AND (B0 AND NOT A0))**
+- **A = B**:
+  - **E1 AND E0**
+
+**Schéma du Circuit**:
+
+```
+  A1 -----|        A0 ----| XOR ----|
+          |              B0 ----| XOR ----| NOT ----| E0
+  B1 -----|          ----|      |       |
+                          |------|       |
+                           OR ----|        |
+                                 |      | A > B
+  A1 -----|        A0 ----| XOR ----| NOT
+          |              B0 ----| XOR ----|
+  B1 -----|          ----|      |       |
+                          |------|      |    | E1 ----| AND -----| OR
+                                |  NOT  |      |    |
+                                |       |  AND  |    |
+  A0 ----|        A1 ----| XOR ----| NOT  |
+          |              B1 ----| XOR ----|  AND ----| OR
+  B0 -----|         ----|      |       |   | E1
+                             
+  Comparaison Totale:
+  A < B = (B1 AND NOT A1) OR (E1 AND (B0 AND NOT A0))
+  A = B = E1 AND E0
+  A > B = (A1 AND NOT B1) OR (E1 AND (A0 AND NOT B0))
+```
+
+### **4. Explication du Schéma**
+
+- **XOR Gates**: Comparent chaque bit des deux nombres pour déterminer s'ils sont égaux ou différents.
+- **AND Gates**: Combinent les résultats de la comparaison des bits pour vérifier les conditions de plus grand, plus petit ou égal.
+- **OR Gates**: Combinent les conditions pour produire les résultats finaux des comparaisons.
+- **NOT Gates**: Inversent les résultats des XOR pour obtenir les valeurs d'égalité.
+
+Ce schéma de comparateur binaire en série est conçu pour comparer des nombres binaires bit par bit, en traitant les bits les plus significatifs en premier et en tenant compte des résultats des bits moins significatifs. Il peut être étendu pour des tailles de bits plus importantes en ajoutant des circuits similaires pour chaque bit supplémentaire.
