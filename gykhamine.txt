@@ -20696,3 +20696,2372 @@ Créer une liste détaillée de commandes pour 150 outils Kali Linux, avec des d
     ```
 
 Cette liste n’est pas exhaustive mais vous donne un aperçu des commandes et options disponibles pour certains des outils les plus utilisés dans Kali Linux. Pour une liste complète, il est recommandé de consulter la documentation officielle de chaque outil, souvent accessible via les pages de manuel (`man [commande]`) ou les options `--help`. Pour les outils plus spécifiques, des guides ou des tutoriels détaillés peuvent être trouvés sur leurs sites officiels ou dans des forums de sécurité.
+Je comprends que tu souhaites une liste exhaustive des fonctions de Matplotlib avec un exemple pour chacune. Voici un aperçu avec des exemples de quelques-unes des fonctions les plus courantes. Note que ce ne sera pas une liste exhaustive mais couvrira des fonctions représentatives.
+
+### `matplotlib.pyplot`
+
+- **`plot()`** : Trace une ligne.
+  ```python
+  import matplotlib.pyplot as plt
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`scatter()`** : Trace un nuage de points.
+  ```python
+  plt.scatter([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`bar()`** : Trace un graphique à barres verticales.
+  ```python
+  plt.bar(['A', 'B', 'C'], [3, 7, 2])
+  plt.show()
+  ```
+
+- **`barh()`** : Trace un graphique à barres horizontales.
+  ```python
+  plt.barh(['A', 'B', 'C'], [3, 7, 2])
+  plt.show()
+  ```
+
+- **`hist()`** : Trace un histogramme.
+  ```python
+  plt.hist([1, 2, 1, 3, 4, 1])
+  plt.show()
+  ```
+
+- **`boxplot()`** : Trace un diagramme en boîte.
+  ```python
+  plt.boxplot([1, 2, 3, 4, 5])
+  plt.show()
+  ```
+
+- **`pie()`** : Trace un graphique en secteurs.
+  ```python
+  plt.pie([10, 20, 30])
+  plt.show()
+  ```
+
+- **`imshow()`** : Affiche une image.
+  ```python
+  import numpy as np
+  data = np.random.rand(10, 10)
+  plt.imshow(data, cmap='hot', interpolation='nearest')
+  plt.show()
+  ```
+
+- **`contour()`** : Trace des contours.
+  ```python
+  X, Y = np.meshgrid(np.linspace(-3.0, 3.0, 100), np.linspace(-3.0, 3.0, 100))
+  Z = np.sin(np.sqrt(X**2 + Y**2))
+  plt.contour(X, Y, Z)
+  plt.show()
+  ```
+
+- **`fill_between()`** : Remplit la zone entre deux courbes.
+  ```python
+  x = np.linspace(0, 10, 100)
+  y1 = np.sin(x)
+  y2 = np.cos(x)
+  plt.fill_between(x, y1, y2)
+  plt.show()
+  ```
+
+- **`subplot()`** : Crée une grille de sous-graphiques.
+  ```python
+  plt.subplot(1, 2, 1)
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.subplot(1, 2, 2)
+  plt.scatter([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`subplots()`** : Crée plusieurs sous-graphiques.
+  ```python
+  fig, axs = plt.subplots(2, 2)
+  axs[0, 0].plot([1, 2, 3], [4, 5, 6])
+  axs[0, 1].scatter([1, 2, 3], [4, 5, 6])
+  axs[1, 0].bar(['A', 'B', 'C'], [3, 7, 2])
+  axs[1, 1].hist([1, 2, 1, 3, 4, 1])
+  plt.show()
+  ```
+
+- **`title()`** : Ajoute un titre au graphique.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.title('Mon Graphique')
+  plt.show()
+  ```
+
+- **`xlabel()`** et **`ylabel()`** : Ajoutent des étiquettes aux axes.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.xlabel('Axe X')
+  plt.ylabel('Axe Y')
+  plt.show()
+  ```
+
+- **`legend()`** : Affiche une légende.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6], label='Ligne')
+  plt.legend()
+  plt.show()
+  ```
+
+- **`grid()`** : Affiche une grille.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.grid(True)
+  plt.show()
+  ```
+
+- **`savefig()`** : Sauvegarde le graphique dans un fichier.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.savefig('graphique.png')
+  ```
+
+- **`show()`** : Affiche le graphique.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`close()`** : Ferme la fenêtre du graphique.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  plt.close()
+  ```
+
+- **`ion()`** et **`ioff()`** : Active/désactive le mode interactif.
+  ```python
+  plt.ion()
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  plt.ioff()
+  ```
+
+- **`gca()`** : Retourne l'axe courant.
+  ```python
+  ax = plt.gca()
+  plt.plot([1, 2, 3], [4, 5, 6])
+  print(ax)
+  plt.show()
+  ```
+
+- **`gcf()`** : Retourne la figure courante.
+  ```python
+  fig = plt.gcf()
+  plt.plot([1, 2, 3], [4, 5, 6])
+  print(fig)
+  plt.show()
+  ```
+
+- **`tight_layout()`** : Ajuste les sous-graphiques pour qu'ils s'adaptent à la figure.
+  ```python
+  plt.subplot(1, 2, 1)
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.subplot(1, 2, 2)
+  plt.scatter([1, 2, 3], [4, 5, 6])
+  plt.tight_layout()
+  plt.show()
+  ```
+
+- **`ylim()`** et **`xlim()`** : Fixent les limites des axes.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.ylim(0, 10)
+  plt.xlim(0, 5)
+  plt.show()
+  ```
+
+- **`xticks()`** et **`yticks()`** : Définissent les positions et les labels des ticks.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.xticks([1, 2, 3], ['A', 'B', 'C'])
+  plt.yticks([4, 5, 6], ['D', 'E', 'F'])
+  plt.show()
+  ```
+
+- **`subplots_adjust()`** : Ajuste l'espacement des sous-graphiques.
+  ```python
+  plt.subplot(1, 2, 1)
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.subplot(1, 2, 2)
+  plt.scatter([1, 2, 3], [4, 5, 6])
+  plt.subplots_adjust(wspace=0.5)
+  plt.show()
+  ```
+
+- **`figtext()`** : Ajoute du texte à la figure.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.figtext(0.5, 0.5, 'Texte de Figure', ha='center')
+  plt.show()
+  ```
+
+- **`errorbar()`** : Trace des barres d'erreur.
+  ```python
+  plt.errorbar([1, 2, 3], [4, 5, 6], yerr=0.2)
+  plt.show()
+  ```
+
+- **`stem()`** : Trace un graphique en tiges.
+  ```python
+  plt.stem([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`violinplot()`** : Trace un graphique en violon.
+  ```python
+  plt.violinplot([1, 2, 3, 4, 5])
+  plt.show()
+  ```
+
+- **`plot_date()`** : Trace des données temporelles.
+  ```python
+  import matplotlib.dates as mdates
+  dates = [mdates.datestr2num('2024-
+
+01-01'), mdates.datestr2num('2024-01-02')]
+  plt.plot_date(dates, [1, 2])
+  plt.show()
+  ```
+
+- **`matshow()`** : Affiche une matrice comme image.
+  ```python
+  data = np.random.rand(10, 10)
+  plt.matshow(data)
+  plt.show()
+  ```
+
+- **`pcolormesh()`** : Trace un maillage coloré.
+  ```python
+  X, Y = np.meshgrid(np.arange(4), np.arange(3))
+  Z = X + Y
+  plt.pcolormesh(X, Y, Z, shading='auto')
+  plt.show()
+  ```
+
+- **`hexbin()`** : Trace un graphique en hexagones.
+  ```python
+  plt.hexbin([1, 2, 3, 4, 5], [1, 2, 2, 3, 3])
+  plt.show()
+  ```
+
+- **`annotate()`** : Ajoute une annotation à un point.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.annotate('Point', xy=(2, 5), xytext=(3, 6), arrowprops=dict(facecolor='red'))
+  plt.show()
+  ```
+
+- **`axhline()`** : Trace une ligne horizontale.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.axhline(y=5, color='r', linestyle='--')
+  plt.show()
+  ```
+
+- **`axvline()`** : Trace une ligne verticale.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.axvline(x=2, color='b', linestyle='--')
+  plt.show()
+  ```
+
+### `matplotlib.axes.Axes`
+
+- **`plot()`** (voir `pyplot.plot()`)
+- **`scatter()`** (voir `pyplot.scatter()`)
+- **`bar()`** (voir `pyplot.bar()`)
+- **`barh()`** (voir `pyplot.barh()`)
+- **`hist()`** (voir `pyplot.hist()`)
+- **`boxplot()`** (voir `pyplot.boxplot()`)
+- **`pie()`** (voir `pyplot.pie()`)
+- **`imshow()`** (voir `pyplot.imshow()`)
+- **`contour()`** (voir `pyplot.contour()`)
+- **`contourf()`** : Trace des contours remplis.
+  ```python
+  X, Y = np.meshgrid(np.linspace(-3.0, 3.0, 100), np.linspace(-3.0, 3.0, 100))
+  Z = np.sin(np.sqrt(X**2 + Y**2))
+  plt.contourf(X, Y, Z)
+  plt.show()
+  ```
+
+- **`fill()`** (voir `pyplot.fill()`)
+- **`fill_between()`** (voir `pyplot.fill_between()`)
+- **`set_title()`** (voir `pyplot.title()`)
+- **`set_xlabel()`** (voir `pyplot.xlabel()`)
+- **`set_ylabel()`** (voir `pyplot.ylabel()`)
+- **`legend()`** (voir `pyplot.legend()`)
+- **`grid()`** (voir `pyplot.grid()`)
+- **`set_xlim()`** et **`set_ylim()`** (voir `pyplot.xlim()` et `pyplot.ylim()`)
+- **`set_xticks()`** et **`set_yticks()`** (voir `pyplot.xticks()` et `pyplot.yticks()`)
+- **`set_xticklabels()`** et **`set_yticklabels()`** (voir `pyplot.xticks()` et `pyplot.yticks()`)
+- **`set_aspect()`** : Définit l'aspect de l'axe.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.gca().set_aspect('equal')
+  plt.show()
+  ```
+
+- **`set_facecolor()`** et **`set_edgecolor()`** (voir `pyplot.gcf()`)
+
+- **`add_patch()`** (voir `matplotlib.patches`)
+- **`add_line()`** (voir `matplotlib.lines`)
+- **`add_artist()`** : Ajoute un artiste (comme une légende) à l'axe.
+  ```python
+  from matplotlib.lines import Line2D
+  ax = plt.gca()
+  line = Line2D([0, 1], [0, 1], color='r')
+  ax.add_line(line)
+  plt.show()
+  ```
+
+- **`clear()`** : Efface les données de l'axe.
+  ```python
+  ax = plt.gca()
+  ax.plot([1, 2, 3], [4, 5, 6])
+  ax.clear()
+  plt.show()
+  ```
+
+- **`cla()`** : Efface l'axe.
+  ```python
+  ax = plt.gca()
+  ax.plot([1, 2, 3], [4, 5, 6])
+  ax.cla()
+  plt.show()
+  ```
+
+- **`set_position()`** : Définit la position de l'axe.
+  ```python
+  ax = plt.gca()
+  ax.set_position([0.1, 0.1, 0.8, 0.8])
+  plt.show()
+  ```
+
+- **`set_adjustable()`** : Définit si l'axe est ajustable.
+  ```python
+  ax = plt.gca()
+  ax.set_adjustable('box')
+  plt.show()
+  ```
+
+- **`set_yticks()`** et **`set_xticks()`** (voir `pyplot.xticks()` et `pyplot.yticks()`)
+
+### `matplotlib.figure.Figure`
+
+- **`add_subplot()`** (voir `pyplot.subplot()`)
+- **`add_axes()`** (voir `pyplot.subplots()`)
+- **`subplots()`** (voir `pyplot.subplots()`)
+- **`gca()`** (voir `pyplot.gca()`)
+- **`gcf()`** (voir `pyplot.gcf()`)
+- **`suptitle()`** : Ajoute un titre à la figure.
+  ```python
+  fig = plt.figure()
+  fig.suptitle('Titre de Figure')
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`savefig()`** (voir `pyplot.savefig()`)
+- **`tight_layout()`** (voir `pyplot.tight_layout()`)
+- **`clf()`** : Efface la figure.
+  ```python
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.clf()
+  ```
+
+- **`clear()`** (voir `pyplot.close()`)
+
+- **`set_size_inches()`** : Définit la taille de la figure.
+  ```python
+  fig = plt.figure()
+  fig.set_size_inches(8, 6)
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`set_facecolor()`** et **`set_edgecolor()`** (voir `pyplot.gcf()`)
+
+### `matplotlib.patches`
+
+- **`Circle()`** : Trace un cercle.
+  ```python
+  from matplotlib.patches import Circle
+  fig, ax = plt.subplots()
+  circle = Circle((0.5, 0.5), 0.4, color='blue', fill=True)
+  ax.add_patch(circle)
+  plt.show()
+  ```
+
+- **`Rectangle()`** : Trace un rectangle.
+  ```python
+  from matplotlib.patches import Rectangle
+  fig, ax = plt.subplots()
+  rectangle = Rectangle((0.1, 0.1), 0.6, 0.3, color='green')
+  ax.add_patch(rectangle)
+  plt.show()
+  ```
+
+- **`Polygon()`** : Trace un polygone.
+  ```python
+  from matplotlib.patches import Polygon
+  fig, ax = plt.subplots()
+  polygon = Polygon([[0.1, 0.1], [0.8, 0.1], [0.5, 0.5]], closed=True, color='red')
+  ax.add_patch(polygon)
+  plt.show()
+  ```
+
+- **`Ellipse()`** : Trace une ellipse.
+  ```python
+  from matplotlib.patches import Ellipse
+  fig, ax = plt.subplots()
+  ellipse = Ellipse((0.5, 0.5), 0.4, 0.2, color='purple')
+  ax.add_patch(ellipse)
+  plt.show()
+  ```
+
+- **`PathPatch()`** : Trace un chemin.
+  ```python
+  from matplotlib.patches import PathPatch
+  from matplotlib.path import Path
+  fig, ax = plt.subplots()
+  path = Path([[0.1, 0.1], [0.5, 0.5], [0.9, 0.1]], [Path.MOVETO, Path.LINETO, Path.CLOSEPOLY])
+  patch = PathPatch(path, facecolor='yellow', edgecolor='black')
+
+
+  ax.add_patch(patch)
+  plt.show()
+  ```
+
+- **`FancyBboxPatch()`** : Trace une boîte avec des coins arrondis.
+  ```python
+  from matplotlib.patches import FancyBboxPatch
+  fig, ax = plt.subplots()
+  box = FancyBboxPatch((0.1, 0.1), 0.6, 0.3, boxstyle="round,pad=0.1", color='cyan')
+  ax.add_patch(box)
+  plt.show()
+  ```
+
+- **`Patch()`** : Classe de base pour les patches.
+  ```python
+  from matplotlib.patches import Patch
+  fig, ax = plt.subplots()
+  patch = Patch(color='grey', label='Patch')
+  ax.legend(handles=[patch])
+  plt.show()
+  ```
+
+- **`RegularPolygon()`** : Trace un polygone régulier.
+  ```python
+  from matplotlib.patches import RegularPolygon
+  fig, ax = plt.subplots()
+  polygon = RegularPolygon((0.5, 0.5), numVertices=6, radius=0.3, color='orange')
+  ax.add_patch(polygon)
+  plt.show()
+  ```
+
+- **`Arc()`** : Trace un arc.
+  ```python
+  from matplotlib.patches import Arc
+  fig, ax = plt.subplots()
+  arc = Arc((0.5, 0.5), 0.6, 0.6, theta1=0, theta2=90, color='black')
+  ax.add_patch(arc)
+  plt.show()
+  ```
+
+- **`ConnectionPatch()`** : Trace une connexion entre deux points.
+  ```python
+  from matplotlib.patches import ConnectionPatch
+  fig, ax = plt.subplots()
+  con = ConnectionPatch(xyA=(0.1, 0.1), xyB=(0.5, 0.5), coordsA='axes fraction', coordsB='axes fraction', color='red', arrowprops=dict(facecolor='blue'))
+  ax.add_patch(con)
+  plt.show()
+  ```
+
+### `matplotlib.lines`
+
+- **`Line2D()`** : Trace une ligne.
+  ```python
+  from matplotlib.lines import Line2D
+  fig, ax = plt.subplots()
+  line = Line2D([0, 1], [0, 1], color='blue')
+  ax.add_line(line)
+  plt.show()
+  ```
+
+- **`set_linestyle()`** : Définit le style de ligne.
+  ```python
+  line = Line2D([0, 1], [0, 1], linestyle='--')
+  ```
+
+- **`set_linewidth()`** : Définit l'épaisseur de la ligne.
+  ```python
+  line = Line2D([0, 1], [0, 1], linewidth=2)
+  ```
+
+- **`set_marker()`** : Définit le marqueur.
+  ```python
+  line = Line2D([0, 1], [0, 1], marker='o')
+  ```
+
+### `matplotlib.ticker`
+
+- **`MaxNLocator()`** : Définit le nombre maximal de ticks.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_major_locator(ticker.MaxNLocator(nbins=5))
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`FuncFormatter()`** : Formate les ticks avec une fonction personnalisée.
+  ```python
+  import matplotlib.ticker as ticker
+  def custom_formatter(x, pos):
+      return f'{x:.2f}'
+  plt.gca().xaxis.set_major_formatter(ticker.FuncFormatter(custom_formatter))
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`FormatStrFormatter()`** : Formate les ticks avec une chaîne de formatage.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_major_formatter(ticker.FormatStrFormatter('%d'))
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`ScalarFormatter()`** : Formate les ticks en valeurs scalaires.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_major_formatter(ticker.ScalarFormatter())
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`StrMethodFormatter()`** : Formate les ticks avec une chaîne de formatage utilisant `str.format()`.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_major_formatter(ticker.StrMethodFormatter('{x:.2f}'))
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`AutoMinorLocator()`** : Localisateur automatique des ticks mineurs.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_minor_locator(ticker.AutoMinorLocator())
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`MultipleLocator()`** : Définit les ticks à des intervalles multiples.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_major_locator(ticker.MultipleLocator(1))
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`LogLocator()`** : Définit des ticks en échelle logarithmique.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_major_locator(ticker.LogLocator(base=10.0, numticks=10))
+  plt.plot([1, 10, 100], [1, 2, 3])
+  plt.show()
+  ```
+
+- **`LogFormatter()`** : Formate les ticks en échelle logarithmique.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_major_formatter(ticker.LogFormatter())
+  plt.plot([1, 10, 100], [1, 2, 3])
+  plt.show()
+  ```
+
+- **`NullFormatter()`** : N'affiche pas les ticks.
+  ```python
+  import matplotlib.ticker as ticker
+  plt.gca().xaxis.set_major_formatter(ticker.NullFormatter())
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+### `matplotlib.colors`
+
+- **`Normalize()`** : Normalise les données pour les mappages de couleurs.
+  ```python
+  from matplotlib.colors import Normalize
+  norm = Normalize(vmin=0, vmax=10)
+  ```
+
+- **`LogNorm()`** : Normalise en échelle logarithmique.
+  ```python
+  from matplotlib.colors import LogNorm
+  norm = LogNorm(vmin=1, vmax=100)
+  ```
+
+- **`SymLogNorm()`** : Normalise avec une échelle symétrique logarithmique.
+  ```python
+  from matplotlib.colors import SymLogNorm
+  norm = SymLogNorm(linthresh=0.03, linscale=0.03, vmin=-1, vmax=1)
+  ```
+
+- **`LinearSegmentedColormap()`** : Crée une colormap personnalisée.
+  ```python
+  from matplotlib.colors import LinearSegmentedColormap
+  cmap = LinearSegmentedColormap.from_list('mycmap', ['blue', 'white', 'red'])
+  ```
+
+- **`ListedColormap()`** : Crée une colormap à partir d'une liste de couleurs.
+  ```python
+  from matplotlib.colors import ListedColormap
+  cmap = ListedColormap(['blue', 'green', 'yellow', 'red'])
+  ```
+
+- **`Colormap()`** : Classe de base pour les colormaps.
+  ```python
+  from matplotlib.cm import get_cmap
+  cmap = get_cmap('viridis')
+  ```
+
+- **`to_rgb()`** : Convertit une couleur en RGB.
+  ```python
+  from matplotlib.colors import to_rgb
+  rgb = to_rgb('red')
+  ```
+
+- **`to_hex()`** : Convertit une couleur en hex.
+  ```python
+  from matplotlib.colors import to_hex
+  hex_color = to_hex('red')
+  ```
+
+- **`TABLEAU_COLORS`** et **`CSS4_COLORS`** : Dictionnaires de couleurs prédéfinies.
+  ```python
+  from matplotlib.colors import TABLEAU_COLORS, CSS4_COLORS
+  ```
+
+### `matplotlib.cm`
+
+- **`get_cmap()`** : Retourne une colormap.
+  ```python
+  import matplotlib.cm as cm
+  cmap = cm.get_cmap('viridis')
+  ```
+
+- **`viridis()`** : Colormap viridis.
+  ```python
+  cmap = cm.viridis
+  ```
+
+- **`plasma()`** : Colormap plasma.
+  ```python
+  cmap = cm.plasma
+  ```
+
+- **`inferno()`** : Colormap inferno.
+  ```python
+  cmap = cm.inferno
+  ```
+
+- **`magma()`** : Colormap magma.
+  ```python
+  cmap = cm.magma
+  ``
+
+`
+
+- **`cividis()`** : Colormap cividis.
+  ```python
+  cmap = cm.cividis
+  ```
+
+- **`get_cmap()`** : Retourne une colormap.
+  ```python
+  import matplotlib.cm as cm
+  cmap = cm.get_cmap('viridis')
+  ```
+
+- **`set_cmap()`** : Définit la colormap pour le graphique.
+  ```python
+  import matplotlib.cm as cm
+  cm.set_cmap('viridis')
+  ```
+
+- **`register_cmap()`** : Enregistre une colormap personnalisée.
+  ```python
+  import matplotlib.cm as cm
+  from matplotlib.colors import LinearSegmentedColormap
+  cmap = LinearSegmentedColormap.from_list('mycmap', ['blue', 'white', 'red'])
+  cm.register_cmap('mycmap', cmap)
+  ```
+
+### `matplotlib.backends.backend_agg`
+
+- **`FigureCanvasAgg`** : Classe canvas pour rendre des images au format PNG.
+  ```python
+  from matplotlib.backends.backend_agg import FigureCanvasAgg
+  ```
+
+### `matplotlib.backends.backend_tkagg`
+
+- **`FigureCanvasTkAgg`** : Classe canvas pour intégrer des figures Matplotlib dans des interfaces Tkinter.
+  ```python
+  from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+  ```
+
+### `matplotlib.backends.backend_qt5agg`
+
+- **`FigureCanvasQTAgg`** : Classe canvas pour intégrer des figures Matplotlib dans des interfaces Qt5.
+  ```python
+  from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+  ```
+
+- **`FigureCanvasQT`** : Classe canvas pour intégrer des figures Matplotlib dans des interfaces Qt.
+  ```python
+  from matplotlib.backends.backend_qt5agg import FigureCanvasQT
+  ```
+
+### `matplotlib.backends.backend_svg`
+
+- **`FigureCanvasSVG`** : Classe canvas pour rendre des images au format SVG.
+  ```python
+  from matplotlib.backends.backend_svg import FigureCanvasSVG
+  ```
+
+### `matplotlib.backends.backend_pdf`
+
+- **`FigureCanvasPDF`** : Classe canvas pour rendre des images au format PDF.
+  ```python
+  from matplotlib.backends.backend_pdf import FigureCanvasPDF
+  ```
+
+### `matplotlib.backends.backend_ps`
+
+- **`FigureCanvasPS`** : Classe canvas pour rendre des images au format PostScript.
+  ```python
+  from matplotlib.backends.backend_ps import FigureCanvasPS
+  ```
+
+### `matplotlib.dates`
+
+- **`DateFormatter()`** : Formate les dates.
+  ```python
+  import matplotlib.dates as mdates
+  plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`DayLocator()`** : Localisateur pour les jours.
+  ```python
+  import matplotlib.dates as mdates
+  plt.gca().xaxis.set_major_locator(mdates.DayLocator())
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`MonthLocator()`** : Localisateur pour les mois.
+  ```python
+  import matplotlib.dates as mdates
+  plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`YearLocator()`** : Localisateur pour les années.
+  ```python
+  import matplotlib.dates as mdates
+  plt.gca().xaxis.set_major_locator(mdates.YearLocator())
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`DateLocator()`** : Localisateur pour les dates.
+  ```python
+  import matplotlib.dates as mdates
+  plt.gca().xaxis.set_major_locator(mdates.DateLocator())
+  plt.plot([1, 2, 3], [4, 5, 6])
+  plt.show()
+  ```
+
+- **`date2num()`** : Convertit une date en nombre.
+  ```python
+  import matplotlib.dates as mdates
+  num = mdates.date2num('2024-01-01')
+  ```
+
+- **`num2date()`** : Convertit un nombre en date.
+  ```python
+  import matplotlib.dates as mdates
+  date = mdates.num2date(738500)
+  ```
+
+If you need examples or have questions about specific functions, just let me know!
+Voici une liste complète des fonctions principales de NumPy, accompagnée d'un exemple pour chacune :
+
+### Création de Tableaux
+- **`np.array()`** : Crée un tableau à partir d'une séquence ou d'un autre tableau.
+  ```python
+  import numpy as np
+  arr = np.array([1, 2, 3])
+  ```
+
+- **`np.zeros()`** : Crée un tableau rempli de zéros.
+  ```python
+  arr = np.zeros((2, 3))
+  ```
+
+- **`np.ones()`** : Crée un tableau rempli de uns.
+  ```python
+  arr = np.ones((2, 3))
+  ```
+
+- **`np.empty()`** : Crée un tableau sans initialiser les valeurs.
+  ```python
+  arr = np.empty((2, 3))
+  ```
+
+- **`np.full()`** : Crée un tableau rempli d'une valeur spécifique.
+  ```python
+  arr = np.full((2, 3), 7)
+  ```
+
+- **`np.arange()`** : Crée un tableau avec une séquence d'entiers.
+  ```python
+  arr = np.arange(0, 10, 2)
+  ```
+
+- **`np.linspace()`** : Crée un tableau avec des valeurs espacées uniformément entre deux bornes.
+  ```python
+  arr = np.linspace(0, 1, 5)
+  ```
+
+- **`np.logspace()`** : Crée un tableau avec des valeurs espacées logarithmiquement.
+  ```python
+  arr = np.logspace(0, 2, 5)
+  ```
+
+- **`np.meshgrid()`** : Crée des matrices de grille à partir de vecteurs de coordonnées.
+  ```python
+  x = np.array([1, 2, 3])
+  y = np.array([4, 5, 6])
+  X, Y = np.meshgrid(x, y)
+  ```
+
+- **`np.eye()`** : Crée une matrice identité.
+  ```python
+  arr = np.eye(3)
+  ```
+
+- **`np.identity()`** : Crée une matrice identité.
+  ```python
+  arr = np.identity(3)
+  ```
+
+- **`np.diag()`** : Crée une matrice diagonale ou extrait la diagonale d'une matrice.
+  ```python
+  arr = np.diag([1, 2, 3])
+  ```
+
+- **`np.random.rand()`** : Génère des nombres aléatoires uniformément distribués.
+  ```python
+  arr = np.random.rand(2, 3)
+  ```
+
+- **`np.random.randn()`** : Génère des nombres aléatoires suivant une distribution normale.
+  ```python
+  arr = np.random.randn(2, 3)
+  ```
+
+- **`np.random.randint()`** : Génère des entiers aléatoires dans un intervalle spécifié.
+  ```python
+  arr = np.random.randint(0, 10, (2, 3))
+  ```
+
+- **`np.random.choice()`** : Choisit des éléments aléatoires à partir d'un tableau ou d'une liste.
+  ```python
+  arr = np.random.choice([1, 2, 3], size=(2, 3))
+  ```
+
+- **`np.random.permutation()`** : Retourne une permutation aléatoire d'un tableau ou d'une séquence.
+  ```python
+  arr = np.random.permutation([1, 2, 3])
+  ```
+
+### Manipulation des Tableaux
+- **`np.reshape()`** : Change la forme d'un tableau.
+  ```python
+  arr = np.arange(6).reshape((2, 3))
+  ```
+
+- **`np.flatten()`** : Aplati un tableau multidimensionnel.
+  ```python
+  arr = np.array([[1, 2, 3], [4, 5, 6]])
+  flat_arr = arr.flatten()
+  ```
+
+- **`np.ravel()`** : Aplati un tableau multidimensionnel sans créer une copie.
+  ```python
+  arr = np.array([[1, 2, 3], [4, 5, 6]])
+  flat_arr = arr.ravel()
+  ```
+
+- **`np.transpose()`** : Transpose un tableau.
+  ```python
+  arr = np.array([[1, 2], [3, 4]])
+  transposed = arr.T
+  ```
+
+- **`np.swapaxes()`** : Échange les axes d'un tableau.
+  ```python
+  arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+  swapped = arr.swapaxes(0, 1)
+  ```
+
+- **`np.concatenate()`** : Concatène des tableaux le long d'un axe spécifié.
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  concatenated = np.concatenate((arr1, arr2))
+  ```
+
+- **`np.stack()`** : Empile des tableaux le long d'un nouvel axe.
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  stacked = np.stack((arr1, arr2))
+  ```
+
+- **`np.hstack()`** : Concatène des tableaux horizontalement.
+  ```python
+  arr1 = np.array([[1], [2]])
+  arr2 = np.array([[3], [4]])
+  hstacked = np.hstack((arr1, arr2))
+  ```
+
+- **`np.vstack()`** : Concatène des tableaux verticalement.
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  vstacked = np.vstack((arr1, arr2))
+  ```
+
+- **`np.split()`** : Divise un tableau en sous-tableaux.
+  ```python
+  arr = np.array([1, 2, 3, 4])
+  split_arr = np.split(arr, 2)
+  ```
+
+- **`np.hsplit()`** : Divise un tableau en sous-tableaux horizontalement.
+  ```python
+  arr = np.array([[1, 2, 3], [4, 5, 6]])
+  split_arr = np.hsplit(arr, 3)
+  ```
+
+- **`np.vsplit()`** : Divise un tableau en sous-tableaux verticalement.
+  ```python
+  arr = np.array([[1, 2, 3], [4, 5, 6]])
+  split_arr = np.vsplit(arr, 2)
+  ```
+
+- **`np.tile()`** : Répète un tableau plusieurs fois.
+  ```python
+  arr = np.array([[1, 2]])
+  tiled = np.tile(arr, (2, 3))
+  ```
+
+- **`np.repeat()`** : Répète les éléments d'un tableau.
+  ```python
+  arr = np.array([1, 2, 3])
+  repeated = np.repeat(arr, 2)
+  ```
+
+- **`np.append()`** : Ajoute des éléments à un tableau.
+  ```python
+  arr = np.array([1, 2, 3])
+  appended = np.append(arr, [4, 5])
+  ```
+
+- **`np.insert()`** : Insère des éléments dans un tableau à des positions spécifiées.
+  ```python
+  arr = np.array([1, 2, 3])
+  inserted = np.insert(arr, 1, [4, 5])
+  ```
+
+- **`np.delete()`** : Supprime des éléments d'un tableau à des positions spécifiées.
+  ```python
+  arr = np.array([1, 2, 3, 4])
+  deleted = np.delete(arr, 1)
+  ```
+
+- **`np.sort()`** : Trie les éléments d'un tableau.
+  ```python
+  arr = np.array([3, 1, 2])
+  sorted_arr = np.sort(arr)
+  ```
+
+- **`np.argsort()`** : Retourne les indices qui trieraient un tableau.
+  ```python
+  arr = np.array([3, 1, 2])
+  sorted_indices = np.argsort(arr)
+  ```
+
+- **`np.unique()`** : Trouve les valeurs uniques dans un tableau.
+  ```python
+  arr = np.array([1, 2, 2, 3])
+  unique_arr = np.unique(arr)
+  ```
+
+### Opérations sur les Tableaux
+- **`np.add()`** : Additionne deux tableaux.
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  result = np.add(arr1, arr2)
+  ```
+
+- **`np.subtract()`** : Soustrait deux tableaux.
+  ```python
+  arr1 = np.array([5, 6])
+  arr2 = np.array([3, 4])
+  result = np.subtract(arr1, arr2)
+  ```
+
+- **`np.multiply()`** : Multiplie deux tableaux.
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  result = np.multiply(arr1, arr2)
+  ```
+
+- **`np.divide()`** : Divise deux tableaux.
+
+
+  ```python
+  arr1 = np.array([4, 6])
+  arr2 = np.array([2, 3])
+  result = np.divide(arr1, arr2)
+  ```
+
+- **`np.power()`** : Élève les éléments à une puissance.
+  ```python
+  arr = np.array([2, 3])
+  result = np.power(arr, 2)
+  ```
+
+- **`np.mod()`** : Calcule le reste de la division.
+  ```python
+  arr1 = np.array([7, 8])
+  arr2 = np.array([3, 4])
+  result = np.mod(arr1, arr2)
+  ```
+
+- **`np.abs()`** : Calcule la valeur absolue des éléments.
+  ```python
+  arr = np.array([-1, -2, 3])
+  abs_arr = np.abs(arr)
+  ```
+
+- **`np.sign()`** : Retourne le signe des éléments.
+  ```python
+  arr = np.array([-1, 0, 1])
+  sign_arr = np.sign(arr)
+  ```
+
+- **`np.sqrt()`** : Calcule la racine carrée.
+  ```python
+  arr = np.array([1, 4, 9])
+  sqrt_arr = np.sqrt(arr)
+  ```
+
+- **`np.exp()`** : Calcule l'exponentielle.
+  ```python
+  arr = np.array([1, 2])
+  exp_arr = np.exp(arr)
+  ```
+
+- **`np.log()`** : Calcule le logarithme naturel.
+  ```python
+  arr = np.array([1, np.e])
+  log_arr = np.log(arr)
+  ```
+
+- **`np.log10()`** : Calcule le logarithme en base 10.
+  ```python
+  arr = np.array([1, 10])
+  log10_arr = np.log10(arr)
+  ```
+
+- **`np.log2()`** : Calcule le logarithme en base 2.
+  ```python
+  arr = np.array([1, 2, 4])
+  log2_arr = np.log2(arr)
+  ```
+
+- **`np.sin()`** : Calcule le sinus.
+  ```python
+  arr = np.array([0, np.pi / 2])
+  sin_arr = np.sin(arr)
+  ```
+
+- **`np.cos()`** : Calcule le cosinus.
+  ```python
+  arr = np.array([0, np.pi / 2])
+  cos_arr = np.cos(arr)
+  ```
+
+- **`np.tan()`** : Calcule la tangente.
+  ```python
+  arr = np.array([0, np.pi / 4])
+  tan_arr = np.tan(arr)
+  ```
+
+- **`np.arcsin()`** : Calcule l'arc sinus.
+  ```python
+  arr = np.array([0, 0.5])
+  arcsin_arr = np.arcsin(arr)
+  ```
+
+- **`np.arccos()`** : Calcule l'arc cosinus.
+  ```python
+  arr = np.array([1, 0.5])
+  arccos_arr = np.arccos(arr)
+  ```
+
+- **`np.arctan()`** : Calcule l'arc tangente.
+  ```python
+  arr = np.array([0, 1])
+  arctan_arr = np.arctan(arr)
+  ```
+
+- **`np.sinh()`** : Calcule le sinus hyperbolique.
+  ```python
+  arr = np.array([0, 1])
+  sinh_arr = np.sinh(arr)
+  ```
+
+- **`np.cosh()`** : Calcule le cosinus hyperbolique.
+  ```python
+  arr = np.array([0, 1])
+  cosh_arr = np.cosh(arr)
+  ```
+
+- **`np.tanh()`** : Calcule la tangente hyperbolique.
+  ```python
+  arr = np.array([0, 1])
+  tanh_arr = np.tanh(arr)
+  ```
+
+### Statistiques
+- **`np.mean()`** : Calcule la moyenne des éléments.
+  ```python
+  arr = np.array([1, 2, 3])
+  mean_val = np.mean(arr)
+  ```
+
+- **`np.std()`** : Calcule l'écart type.
+  ```python
+  arr = np.array([1, 2, 3])
+  std_dev = np.std(arr)
+  ```
+
+- **`np.var()`** : Calcule la variance.
+  ```python
+  arr = np.array([1, 2, 3])
+  variance = np.var(arr)
+  ```
+
+- **`np.min()`** : Trouve la valeur minimale.
+  ```python
+  arr = np.array([1, 2, 3])
+  min_val = np.min(arr)
+  ```
+
+- **`np.max()`** : Trouve la valeur maximale.
+  ```python
+  arr = np.array([1, 2, 3])
+  max_val = np.max(arr)
+  ```
+
+- **`np.argmin()`** : Trouve l'indice de la valeur minimale.
+  ```python
+  arr = np.array([1, 2, 3])
+  argmin_val = np.argmin(arr)
+  ```
+
+- **`np.argmax()`** : Trouve l'indice de la valeur maximale.
+  ```python
+  arr = np.array([1, 2, 3])
+  argmax_val = np.argmax(arr)
+  ```
+
+- **`np.median()`** : Calcule la médiane.
+  ```python
+  arr = np.array([1, 2, 3])
+  median_val = np.median(arr)
+  ```
+
+- **`np.percentile()`** : Calcule le percentile.
+  ```python
+  arr = np.array([1, 2, 3, 4, 5])
+  perc_50 = np.percentile(arr, 50)
+  ```
+
+- **`np.cumsum()`** : Calcule la somme cumulative.
+  ```python
+  arr = np.array([1, 2, 3])
+  cumsum_arr = np.cumsum(arr)
+  ```
+
+- **`np.cumprod()`** : Calcule le produit cumulatif.
+  ```python
+  arr = np.array([1, 2, 3])
+  cumprod_arr = np.cumprod(arr)
+  ```
+
+- **`np.histogram()`** : Calcule un histogramme.
+  ```python
+  arr = np.array([1, 2, 1, 3, 2, 1])
+  hist, bins = np.histogram(arr, bins=3)
+  ```
+
+- **`np.bincount()`** : Compte les occurrences d'éléments dans un tableau d'entiers non négatifs.
+  ```python
+  arr = np.array([1, 2, 1, 3, 2, 1])
+  bincount_arr = np.bincount(arr)
+  ```
+
+- **`np.corrcoef()`** : Calcule le coefficient de corrélation.
+  ```python
+  arr1 = np.array([1, 2, 3])
+  arr2 = np.array([4, 5, 6])
+  corrcoef_matrix = np.corrcoef(arr1, arr2)
+  ```
+
+- **`np.cov()`** : Calcule la matrice de covariance.
+  ```python
+  arr1 = np.array([1, 2, 3])
+  arr2 = np.array([4, 5, 6])
+  cov_matrix = np.cov(arr1, arr2)
+  ```
+
+- **`np.rank()`** : Calcule le rang d'une matrice.
+  ```python
+  from numpy.linalg import matrix_rank
+  arr = np.array([[1, 2], [3, 4]])
+  rank_val = matrix_rank(arr)
+  ```
+
+### Opérations Logiques
+- **`np.all()`** : Vérifie si tous les éléments sont vrais.
+  ```python
+  arr = np.array([True, False])
+  all_true = np.all(arr)
+  ```
+
+- **`np.any()`** : Vérifie si n'importe quel élément est vrai.
+  ```python
+  arr = np.array([True, False])
+  any_true = np.any(arr)
+  ```
+
+- **`np.where()`** : Retourne les indices des éléments qui satisfont une condition.
+  ```python
+  arr = np.array([1, 2, 3])
+  indices = np.where(arr > 1)
+  ```
+
+- **`np.logical_and()`** : Calcule le "et" logique.
+  ```python
+  arr1 = np.array([True, False])
+  arr2 = np.array([True, True])
+  result = np.logical_and(arr1, arr2)
+  ```
+
+- **`np.logical_or()`** : Calcule le "ou" logique.
+  ```python
+  arr1 = np.array([True, False])
+  arr2 = np.array([False, True])
+  result = np.logical_or(arr1, arr2)
+  ```
+
+- **`np.logical_not()`** : Calcule la négation logique.
+  ```python
+  arr = np.array([True, False])
+  result = np.logical_not(arr)
+  ```
+
+- **`np.logical_xor()`** : Calcule le "ou exclusif" logique.
+  ```python
+  arr1 = np.array([True, False])
+  arr2 = np.array([True, True
+
+])
+  result = np.logical_xor(arr1, arr2)
+  ```
+
+### Algèbre Linéaire
+- **`np.dot()`** : Produit scalaire de deux tableaux.
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  dot_product = np.dot(arr1, arr2)
+  ```
+
+- **`np.matmul()`** : Produit matriciel.
+  ```python
+  arr1 = np.array([[1, 2], [3, 4]])
+  arr2 = np.array([[5, 6], [7, 8]])
+  matmul_result = np.matmul(arr1, arr2)
+  ```
+
+- **`np.linalg.inv()`** : Calcule l'inverse d'une matrice.
+  ```python
+  from numpy.linalg import inv
+  arr = np.array([[1, 2], [3, 4]])
+  inv_arr = inv(arr)
+  ```
+
+- **`np.linalg.det()`** : Calcule le déterminant d'une matrice.
+  ```python
+  from numpy.linalg import det
+  arr = np.array([[1, 2], [3, 4]])
+  determinant = det(arr)
+  ```
+
+- **`np.linalg.eig()`** : Calcule les valeurs propres et les vecteurs propres d'une matrice.
+  ```python
+  from numpy.linalg import eig
+  arr = np.array([[1, 2], [3, 4]])
+  eigenvalues, eigenvectors = eig(arr)
+  ```
+
+- **`np.linalg.svd()`** : Calcule la décomposition en valeurs singulières.
+  ```python
+  from numpy.linalg import svd
+  arr = np.array([[1, 2], [3, 4]])
+  U, S, Vh = svd(arr)
+  ```
+
+- **`np.linalg.norm()`** : Calcule la norme d'un tableau.
+  ```python
+  from numpy.linalg import norm
+  arr = np.array([1, 2, 3])
+  norm_val = norm(arr)
+  ```
+
+### Fonctionnalités Diverses
+- **`np.save()`** : Sauvegarde un tableau dans un fichier binaire.
+  ```python
+  arr = np.array([1, 2, 3])
+  np.save('array.npy', arr)
+  ```
+
+- **`np.load()`** : Charge un tableau à partir d'un fichier binaire.
+  ```python
+  loaded_arr = np.load('array.npy')
+  ```
+
+- **`np.savetxt()`** : Sauvegarde un tableau dans un fichier texte.
+  ```python
+  arr = np.array([1, 2, 3])
+  np.savetxt('array.txt', arr)
+  ```
+
+- **`np.loadtxt()`** : Charge un tableau à partir d'un fichier texte.
+  ```python
+  loaded_arr = np.loadtxt('array.txt')
+  ```
+
+- **`np.savez()`** : Sauvegarde plusieurs tableaux dans un fichier binaire compressé.
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  np.savez('arrays.npz', arr1=arr1, arr2=arr2)
+  ```
+
+- **`np.loadz()`** : Charge plusieurs tableaux à partir d'un fichier binaire compressé.
+  ```python
+  loaded_data = np.load('arrays.npz')
+  arr1 = loaded_data['arr1']
+  arr2 = loaded_data['arr2']
+  ```
+
+Cette liste couvre une grande partie des fonctionnalités de NumPy, mais il existe d'autres fonctions et méthodes spécialisées dans le module. Pour une documentation complète, vous pouvez consulter [la documentation officielle de NumPy](https://numpy.org/doc/stable/).
+Voici une vue d'ensemble des principaux modules Java avec des exemples et des descriptions pour chaque module et fonction, couvrant les packages les plus utilisés.
+
+### 1. **`java.lang`**
+
+- **Description**: Contient des classes fondamentales du langage Java, y compris des classes pour les chaînes de caractères, les nombres, les exceptions, et les opérations de base.
+
+  - **`System.out.println()`**
+    - **Description**: Affiche une ligne de texte sur la console.
+    - **Exemple**:
+      ```java
+      System.out.println("Hello, World!");
+      ```
+
+  - **`Math.max()`**
+    - **Description**: Retourne le plus grand de deux valeurs.
+    - **Exemple**:
+      ```java
+      int max = Math.max(5, 10); // 10
+      ```
+
+  - **`String.substring()`**
+    - **Description**: Extrait une sous-chaîne d'une chaîne.
+    - **Exemple**:
+      ```java
+      String str = "Hello, World!";
+      String sub = str.substring(0, 5); // "Hello"
+      ```
+
+  - **`Thread.sleep()`**
+    - **Description**: Met en pause le thread actuel pendant un nombre de millisecondes.
+    - **Exemple**:
+      ```java
+      try {
+          Thread.sleep(1000); // Pause de 1 seconde
+      } catch (InterruptedException e) {
+          e.printStackTrace();
+      }
+      ```
+
+### 2. **`java.util`**
+
+- **Description**: Contient des classes pour la manipulation des collections, des dates, et des autres utilitaires.
+
+  - **`ArrayList`**
+    - **Description**: Liste dynamique qui peut contenir des éléments et les accéder par index.
+    - **Exemple**:
+      ```java
+      import java.util.ArrayList;
+
+      ArrayList<String> list = new ArrayList<>();
+      list.add("A");
+      list.add("B");
+      ```
+
+  - **`HashMap`**
+    - **Description**: Map qui associe des clés uniques à des valeurs.
+    - **Exemple**:
+      ```java
+      import java.util.HashMap;
+
+      HashMap<String, Integer> map = new HashMap<>();
+      map.put("A", 1);
+      map.put("B", 2);
+      ```
+
+  - **`Collections.sort()`**
+    - **Description**: Trie les éléments d'une liste.
+    - **Exemple**:
+      ```java
+      import java.util.Collections;
+      import java.util.ArrayList;
+
+      ArrayList<Integer> numbers = new ArrayList<>();
+      numbers.add(3);
+      numbers.add(1);
+      numbers.add(2);
+      Collections.sort(numbers);
+      ```
+
+  - **`Calendar`**
+    - **Description**: Classe pour la manipulation des dates et heures.
+    - **Exemple**:
+      ```java
+      import java.util.Calendar;
+
+      Calendar cal = Calendar.getInstance();
+      cal.set(2024, Calendar.AUGUST, 19);
+      ```
+
+  - **`Date`**
+    - **Description**: Représente un instant dans le temps.
+    - **Exemple**:
+      ```java
+      import java.util.Date;
+
+      Date now = new Date();
+      ```
+
+### 3. **`java.io`**
+
+- **Description**: Contient des classes pour la lecture et l'écriture de données.
+
+  - **`File`**
+    - **Description**: Représente un fichier ou un répertoire.
+    - **Exemple**:
+      ```java
+      import java.io.File;
+
+      File file = new File("example.txt");
+      ```
+
+  - **`FileReader`**
+    - **Description**: Permet de lire des fichiers texte.
+    - **Exemple**:
+      ```java
+      import java.io.FileReader;
+      import java.io.IOException;
+
+      try (FileReader fr = new FileReader("example.txt")) {
+          int c;
+          while ((c = fr.read()) != -1) {
+              System.out.print((char) c);
+          }
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+      ```
+
+  - **`BufferedWriter`**
+    - **Description**: Permet d'écrire des caractères de manière tamponnée.
+    - **Exemple**:
+      ```java
+      import java.io.BufferedWriter;
+      import java.io.FileWriter;
+      import java.io.IOException;
+
+      try (BufferedWriter bw = new BufferedWriter(new FileWriter("example.txt"))) {
+          bw.write("Hello, World!");
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+      ```
+
+  - **`ObjectInputStream`**
+    - **Description**: Permet de lire des objets sérialisés.
+    - **Exemple**:
+      ```java
+      import java.io.FileInputStream;
+      import java.io.ObjectInputStream;
+      import java.io.IOException;
+
+      try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("object.dat"))) {
+          MyObject obj = (MyObject) ois.readObject();
+      } catch (IOException | ClassNotFoundException e) {
+          e.printStackTrace();
+      }
+      ```
+
+### 4. **`java.net`**
+
+- **Description**: Contient des classes pour la communication réseau.
+
+  - **`Socket`**
+    - **Description**: Permet de créer une connexion réseau.
+    - **Exemple**:
+      ```java
+      import java.net.Socket;
+      import java.io.IOException;
+
+      try (Socket socket = new Socket("localhost", 8080)) {
+          // Communication avec le serveur
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+      ```
+
+  - **`URL`**
+    - **Description**: Représente une URL et fournit des méthodes pour la manipulation des URL.
+    - **Exemple**:
+      ```java
+      import java.net.URL;
+      import java.io.IOException;
+
+      try {
+          URL url = new URL("http://www.example.com");
+          System.out.println(url.getHost());
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+      ```
+
+  - **`HttpURLConnection`**
+    - **Description**: Permet de gérer les connexions HTTP.
+    - **Exemple**:
+      ```java
+      import java.net.HttpURLConnection;
+      import java.net.URL;
+      import java.io.BufferedReader;
+      import java.io.InputStreamReader;
+      import java.io.IOException;
+
+      try {
+          URL url = new URL("http://www.example.com");
+          HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+          conn.setRequestMethod("GET");
+
+          BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+          String inputLine;
+          while ((inputLine = in.readLine()) != null) {
+              System.out.println(inputLine);
+          }
+          in.close();
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+      ```
+
+### 5. **`java.sql`**
+
+- **Description**: Contient des classes pour la gestion des bases de données relationnelles.
+
+  - **`Connection`**
+    - **Description**: Représente une connexion à une base de données.
+    - **Exemple**:
+      ```java
+      import java.sql.Connection;
+      import java.sql.DriverManager;
+      import java.sql.SQLException;
+
+      try {
+          Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/db", "user", "password");
+      } catch (SQLException e) {
+          e.printStackTrace();
+      }
+      ```
+
+  - **`Statement`**
+    - **Description**: Permet d'exécuter des requêtes SQL.
+    - **Exemple**:
+      ```java
+      import java.sql.Statement;
+      import java.sql.ResultSet;
+      import java.sql.SQLException;
+
+      try (Statement stmt = conn.createStatement()) {
+          ResultSet rs = stmt.executeQuery("SELECT * FROM table");
+          while (rs.next()) {
+              System.out.println(rs.getString("column_name"));
+          }
+      } catch (SQLException e) {
+          e.printStackTrace();
+      }
+      ```
+
+  - **`PreparedStatement`**
+    - **Description**: Permet d'exécuter des requêtes SQL avec des paramètres.
+    - **Exemple**:
+      ```java
+      import java.sql.PreparedStatement;
+      import java.sql.SQLException;
+
+      try (PreparedStatement pstmt = conn.prepareStatement("INSERT INTO table (column) VALUES (?)")) {
+          pstmt.setString(1, "value");
+          pstmt.executeUpdate();
+      } catch (SQLException e) {
+          e.printStackTrace();
+      }
+      ```
+
+### 6. **`java.awt`**
+
+- **Description**: Contient des classes pour la création d'interfaces graphiques et la gestion des événements graphiques.
+
+  - **`Frame`**
+    - **Description**: Représente une fenêtre graphique.
+    - **Exemple**:
+      ```java
+      import java.awt.Frame;
+
+      Frame frame = new Frame("My Frame");
+      frame.setSize(300, 200);
+      frame.setVisible(true);
+      ```
+
+  - **`Button`**
+    - **Description**: Représente un bouton graphique.
+    - **Exemple**:
+      ```java
+      import java.awt.Button;
+      import java.awt.Frame;
+
+      Frame frame = new Frame();
+      Button button = new Button("Click Me");
+      frame.add(button);
+      frame.setSize(300, 200);
+      frame.setVisible(true);
+      ```
+
+### 7. **`javax.swing`**
+
+- **Description**: Fournit des composants GUI plus sophistiqués que ceux de AWT
+
+.
+
+  - **`JFrame`**
+    - **Description**: Représente une fenêtre pour les applications Swing.
+    - **Exemple**:
+      ```java
+      import javax.swing.JFrame;
+
+      JFrame frame = new JFrame("My JFrame");
+      frame.setSize(300, 200);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.setVisible(true);
+      ```
+
+  - **`JButton`**
+    - **Description**: Représente un bouton dans une interface Swing.
+    - **Exemple**:
+      ```java
+      import javax.swing.JButton;
+      import javax.swing.JFrame;
+
+      JFrame frame = new JFrame();
+      JButton button = new JButton("Click Me");
+      frame.add(button);
+      frame.setSize(300, 200);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.setVisible(true);
+      ```
+
+  - **`JLabel`**
+    - **Description**: Représente une étiquette dans une interface Swing.
+    - **Exemple**:
+      ```java
+      import javax.swing.JLabel;
+      import javax.swing.JFrame;
+
+      JFrame frame = new JFrame();
+      JLabel label = new JLabel("Hello, Swing!");
+      frame.add(label);
+      frame.setSize(300, 200);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.setVisible(true);
+      ```
+
+### 8. **`java.util.concurrent`**
+
+- **Description**: Contient des classes pour la programmation concurrente et les tâches en parallèle.
+
+  - **`ExecutorService`**
+    - **Description**: Exécute des tâches asynchrones dans un pool de threads.
+    - **Exemple**:
+      ```java
+      import java.util.concurrent.ExecutorService;
+      import java.util.concurrent.Executors;
+
+      ExecutorService executor = Executors.newFixedThreadPool(10);
+      executor.submit(() -> {
+          System.out.println("Task executed");
+      });
+      executor.shutdown();
+      ```
+
+  - **`Future`**
+    - **Description**: Représente le résultat d'une computation asynchrone.
+    - **Exemple**:
+      ```java
+      import java.util.concurrent.Future;
+      import java.util.concurrent.Callable;
+      import java.util.concurrent.Executors;
+      import java.util.concurrent.ExecutorService;
+
+      ExecutorService executor = Executors.newSingleThreadExecutor();
+      Future<Integer> future = executor.submit(() -> {
+          return 123;
+      });
+      try {
+          Integer result = future.get();
+          System.out.println(result);
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
+      executor.shutdown();
+      ```
+
+  - **`CountDownLatch`**
+    - **Description**: Permet à un ou plusieurs threads d'attendre jusqu'à ce que un certain nombre d'actions se produisent.
+    - **Exemple**:
+      ```java
+      import java.util.concurrent.CountDownLatch;
+
+      CountDownLatch latch = new CountDownLatch(1);
+      Runnable task = () -> {
+          System.out.println("Task running");
+          latch.countDown();
+      };
+      new Thread(task).start();
+      try {
+          latch.await(); // Attendre que latch.countDown() soit appelé
+          System.out.println("Task completed");
+      } catch (InterruptedException e) {
+          e.printStackTrace();
+      }
+      ```
+
+### 9. **`java.nio`**
+
+- **Description**: Contient des classes pour la gestion des entrées/sorties non-bloquantes.
+
+  - **`ByteBuffer`**
+    - **Description**: Permet de lire et d'écrire des données binaires.
+    - **Exemple**:
+      ```java
+      import java.nio.ByteBuffer;
+
+      ByteBuffer buffer = ByteBuffer.allocate(10);
+      buffer.put((byte) 1);
+      buffer.put((byte) 2);
+      buffer.flip();
+      System.out.println(buffer.get()); // 1
+      ```
+
+  - **`FileChannel`**
+    - **Description**: Permet de lire et d'écrire des fichiers.
+    - **Exemple**:
+      ```java
+      import java.nio.channels.FileChannel;
+      import java.nio.file.Paths;
+      import java.nio.file.StandardOpenOption;
+      import java.io.IOException;
+      import java.nio.ByteBuffer;
+
+      try (FileChannel fileChannel = FileChannel.open(Paths.get("example.txt"), StandardOpenOption.WRITE)) {
+          ByteBuffer buffer = ByteBuffer.allocate(48);
+          buffer.clear();
+          buffer.put("Hello, NIO!".getBytes());
+          buffer.flip();
+          fileChannel.write(buffer);
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+      ```
+
+Cette liste couvre une grande partie des fonctionnalités disponibles dans les modules Java les plus utilisés, mais il existe encore d'autres modules et classes spécialisés pour des tâches plus spécifiques. Pour une documentation complète, vous pouvez consulter [la documentation officielle de Java](https://docs.oracle.com/en/java/javase/).
+L’interaction entre Java et Android est fondamentale pour le développement d’applications Android. Android utilise une version modifiée de Java pour offrir une plateforme optimisée pour les appareils mobiles. Voici une explication détaillée de cette interaction :
+
+### 1. **Historique et Contexte**
+
+#### **Java et Android**
+- **Langage Java**: Java est un langage de programmation orienté objet utilisé dans le développement d'applications de bureau, web, et serveur. Il est basé sur la JVM (Java Virtual Machine) qui permet d'exécuter des programmes Java de manière portable.
+- **Android**: Android est un système d'exploitation mobile basé sur un noyau Linux et développé par Google. Initialement, Android utilisait la version standard de Java, mais avec le temps, il a évolué pour adopter une version modifiée appelée **Android Runtime (ART)**, qui remplace la JVM traditionnelle.
+
+### 2. **Android et le Java Virtual Machine (JVM)**
+
+#### **Dalvik Virtual Machine (DVM)**
+- **DVM**: Jusqu'à Android 4.4, Android utilisait la Dalvik Virtual Machine (DVM) pour exécuter les applications. DVM est une machine virtuelle conçue spécifiquement pour les appareils mobiles avec un objectif d'efficacité en termes de mémoire et de performances.
+- **Dex Format**: Les applications Android sont compilées en bytecode Java, puis transformées en format Dalvik Executable (DEX) par le compilateur `dx`. Le bytecode DEX est optimisé pour une exécution plus rapide sur les appareils mobiles.
+
+#### **Android Runtime (ART)**
+- **ART**: À partir d'Android 4.4 et au-delà, Android a introduit ART comme une alternative à DVM. ART utilise la compilation Ahead-Of-Time (AOT) en plus de la compilation Just-In-Time (JIT). La compilation AOT permet de convertir le bytecode DEX en code machine natif lors de l'installation de l'application, ce qui améliore les performances d'exécution.
+
+### 3. **Développement d'Applications Android avec Java**
+
+#### **SDK Android**
+- **Android SDK**: Le Software Development Kit (SDK) Android fournit les outils nécessaires pour développer des applications Android. Il inclut des bibliothèques Java spécifiques à Android, des outils de compilation, un émulateur et des API pour accéder aux fonctionnalités du système Android.
+- **API Android**: Android fournit des API Java pour accéder à divers services du système tels que la gestion des activités, des fragments, des services, des bases de données SQLite, et des éléments d'interface utilisateur comme les vues (Views).
+
+#### **Structure d’une Application Android**
+- **Manifest**: `AndroidManifest.xml` est le fichier de configuration qui déclare les composants de l'application (activités, services, récepteurs, fournisseurs de contenu) et les autorisations nécessaires.
+- **Activités et Fragments**: Les activités sont des composants principaux d'une application Android, représentant une seule interface utilisateur. Les fragments sont des parties modulaires d'une activité, permettant de créer des interfaces utilisateur dynamiques et réutilisables.
+- **Services**: Les services sont des composants qui effectuent des opérations en arrière-plan sans interface utilisateur.
+- **Broadcast Receivers**: Permettent à l'application de recevoir et de réagir aux événements diffusés par le système ou d'autres applications.
+- **Content Providers**: Gèrent l'accès aux données de l'application et permettent de partager ces données avec d'autres applications.
+
+### 4. **Interaction entre Java Standard et API Android**
+
+#### **Bibliothèques Java Standard**
+- **Java Standard Library**: De nombreuses bibliothèques Java standard telles que `java.util`, `java.io`, `java.net` sont disponibles sur Android. Cependant, certaines classes et méthodes de la bibliothèque Java standard sont soit modifiées, soit absentes en raison des contraintes de la plateforme mobile.
+
+#### **API Android**
+- **Android API Framework**: Fournit des classes et interfaces spécifiques à Android qui ne sont pas disponibles dans le JDK standard, telles que `Activity`, `Intent`, `Context`, `View`, `Service`, etc. Ces classes sont adaptées aux besoins des applications mobiles et gèrent des aspects tels que l'interface utilisateur, la gestion des ressources, et les interactions entre composants.
+
+### 5. **Compilation et Exécution**
+
+#### **Compilation**
+- **Code Source Java**: Les fichiers source Java (.java) sont écrits dans l'IDE Android Studio ou un autre éditeur compatible.
+- **Compilation en Bytecode**: Le code Java est compilé en bytecode Java (.class) par le compilateur Java standard.
+- **Conversion en DEX**: Le bytecode est ensuite converti en DEX par le `dx` tool ou le `d8` tool pour Android, afin d’être compatible avec DVM/ART.
+
+#### **Exécution**
+- **Installation**: Lorsqu'une application est installée, le code DEX est extrait et installé sur l'appareil Android.
+- **Exécution**: ART ou DVM (selon la version d'Android) exécute le code DEX. ART utilise la compilation AOT pour améliorer les performances, tandis que DVM utilise la compilation JIT.
+
+### 6. **Compatibilité et Évolution**
+
+#### **Compatibilité**
+- **Versions Android**: Les applications doivent être compatibles avec différentes versions d'Android, en utilisant des API de compatibilité lorsque nécessaire. Android fournit des mécanismes pour gérer cette compatibilité, comme les bibliothèques de support (`androidx`).
+
+#### **Évolution**
+- **Modernisation**: Au fil du temps, Android évolue avec de nouvelles versions qui introduisent de nouvelles API et déprécient les anciennes. Les développeurs doivent adapter leur code pour tirer parti des nouvelles fonctionnalités tout en maintenant la compatibilité avec les versions antérieures.
+
+En résumé, l’interaction entre Java et Android repose sur l’utilisation d’une version modifiée de Java (Android Runtime), un ensemble spécifique d’API Android, et des processus de compilation adaptés à l’environnement mobile. Java sert de base pour le développement des applications, mais le framework Android apporte des extensions et des optimisations spécifiques pour les besoins des appareils mobiles.Voici des exemples de la manière de mettre en œuvre des algorithmes de hashage en C et en Python. Nous allons utiliser les algorithmes MD5 et SHA-256, qui sont populaires pour le hashage.
+
+### **1. Algorithme de Hashage MD5**
+
+#### **En C**
+
+Pour implémenter MD5 en C, vous pouvez utiliser la bibliothèque OpenSSL. Voici un exemple de code utilisant OpenSSL pour générer un hash MD5.
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <openssl/md5.h>
+
+void print_md5(unsigned char *digest) {
+    for (int i = 0; i < MD5_DIGEST_LENGTH; i++)
+        printf("%02x", digest[i]);
+    printf("\n");
+}
+
+int main() {
+    unsigned char digest[MD5_DIGEST_LENGTH];
+    const char *string = "Hello, World!";
+    MD5_CTX context;
+
+    MD5_Init(&context);
+    MD5_Update(&context, string, strlen(string));
+    MD5_Final(digest, &context);
+
+    print_md5(digest);
+
+    return 0;
+}
+```
+
+**Instructions**:
+1. Installez OpenSSL si ce n'est pas déjà fait.
+2. Compilez avec `gcc -o md5_example md5_example.c -lssl -lcrypto`.
+3. Exécutez le programme.
+
+#### **En Python**
+
+Pour implémenter MD5 en Python, utilisez la bibliothèque standard `hashlib`.
+
+```python
+import hashlib
+
+def hash_md5(input_string):
+    md5_hash = hashlib.md5()
+    md5_hash.update(input_string.encode())
+    return md5_hash.hexdigest()
+
+if __name__ == "__main__":
+    input_string = "Hello, World!"
+    print(hash_md5(input_string))
+```
+
+### **2. Algorithme de Hashage SHA-256**
+
+#### **En C**
+
+Voici un exemple de code C utilisant OpenSSL pour générer un hash SHA-256.
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <openssl/sha.h>
+
+void print_sha256(unsigned char *digest) {
+    for (int i = 0; i < SHA256_DIGEST_LENGTH; i++)
+        printf("%02x", digest[i]);
+    printf("\n");
+}
+
+int main() {
+    unsigned char digest[SHA256_DIGEST_LENGTH];
+    const char *string = "Hello, World!";
+    SHA256_CTX context;
+
+    SHA256_Init(&context);
+    SHA256_Update(&context, string, strlen(string));
+    SHA256_Final(digest, &context);
+
+    print_sha256(digest);
+
+    return 0;
+}
+```
+
+**Instructions**:
+1. Installez OpenSSL si ce n'est pas déjà fait.
+2. Compilez avec `gcc -o sha256_example sha256_example.c -lssl -lcrypto`.
+3. Exécutez le programme.
+
+#### **En Python**
+
+Pour implémenter SHA-256 en Python, utilisez la bibliothèque `hashlib`.
+
+```python
+import hashlib
+
+def hash_sha256(input_string):
+    sha256_hash = hashlib.sha256()
+    sha256_hash.update(input_string.encode())
+    return sha256_hash.hexdigest()
+
+if __name__ == "__main__":
+    input_string = "Hello, World!"
+    print(hash_sha256(input_string))
+```
+
+### **Explication des Code**
+
+- **MD5** et **SHA-256** sont des algorithmes de hashage qui transforment une entrée (message) en une chaîne de caractères de longueur fixe.
+- En C, les fonctions `MD5_Init`, `MD5_Update`, et `MD5_Final` (ou leurs équivalents pour SHA-256) sont utilisées pour calculer le hash.
+- En Python, `hashlib` simplifie le processus en fournissant des méthodes comme `md5()` et `sha256()` pour créer et manipuler les objets de hashage.
+
+Ces exemples montrent comment utiliser les bibliothèques pour générer des hashs en C et en Python. Assurez-vous de consulter la documentation de la bibliothèque respective pour des fonctionnalités avancées et une meilleure compréhension.
+Le module `cryptography` en Python est très complet et couvre divers aspects de la cryptographie, tels que le chiffrement, le hachage, les signatures numériques, et la gestion des clés. Voici une liste des principales fonctions et classes du module `cryptography`, accompagnée d'exemples pour chaque fonctionnalité.
+
+### 1. **Chiffrement Symétrique**
+
+#### **AES (Advanced Encryption Standard)**
+
+- **Fonction**: Chiffrement et déchiffrement symétrique avec l'algorithme AES.
+
+  ```python
+  from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+  import os
+
+  # Génération de la clé et du IV
+  key = os.urandom(32)  # Clé AES de 256 bits
+  iv = os.urandom(16)   # IV de 128 bits
+
+  # Création du cipher
+  cipher = Cipher(algorithms.AES(key), modes.CFB(iv))
+  encryptor = cipher.encryptor()
+  ciphertext = encryptor.update(b"Secret message") + encryptor.finalize()
+
+  # Déchiffrement
+  decryptor = cipher.decryptor()
+  plaintext = decryptor.update(ciphertext) + decryptor.finalize()
+  ```
+
+### 2. **Chiffrement Asymétrique**
+
+#### **RSA (Rivest-Shamir-Adleman)**
+
+- **Fonction**: Chiffrement et déchiffrement asymétriques avec RSA.
+
+  ```python
+  from cryptography.hazmat.primitives.asymmetric import rsa
+  from cryptography.hazmat.primitives import serialization
+  from cryptography.hazmat.primitives.asymmetric import padding
+  from cryptography.hazmat.primitives import hashes
+
+  # Génération des clés RSA
+  private_key = rsa.generate_private_key(
+      public_exponent=65537,
+      key_size=2048,
+  )
+  public_key = private_key.public_key()
+
+  # Chiffrement
+  ciphertext = public_key.encrypt(
+      b"Secret message",
+      padding.OAEP(
+          mgf=padding.MGF1(algorithm=hashes.SHA256()),
+          algorithm=hashes.SHA256(),
+          label=None
+      )
+  )
+
+  # Déchiffrement
+  plaintext = private_key.decrypt(
+      ciphertext,
+      padding.OAEP(
+          mgf=padding.MGF1(algorithm=hashes.SHA256()),
+          algorithm=hashes.SHA256(),
+          label=None
+      )
+  )
+  ```
+
+### 3. **Hachage**
+
+#### **SHA-256 (Secure Hash Algorithm 256-bit)**
+
+- **Fonction**: Génération de valeurs de hachage avec SHA-256.
+
+  ```python
+  from cryptography.hazmat.primitives import hashes
+
+  # Création de l'objet hash
+  digest = hashes.Hash(hashes.SHA256())
+  digest.update(b"Message to hash")
+  hash_value = digest.finalize()
+  ```
+
+### 4. **Signatures Numériques**
+
+#### **Signature RSA**
+
+- **Fonction**: Signer et vérifier des messages avec RSA.
+
+  ```python
+  from cryptography.hazmat.primitives.asymmetric import rsa
+  from cryptography.hazmat.primitives import hashes
+  from cryptography.hazmat.primitives.asymmetric import padding
+
+  # Génération des clés RSA
+  private_key = rsa.generate_private_key(
+      public_exponent=65537,
+      key_size=2048,
+  )
+  public_key = private_key.public_key()
+
+  # Signature
+  signature = private_key.sign(
+      b"Message to sign",
+      padding.PSS(
+          mgf=padding.MGF1(hashes.SHA256()),
+          salt_length=padding.PSS.MAX_LENGTH
+      ),
+      hashes.SHA256()
+  )
+
+  # Vérification
+  public_key.verify(
+      signature,
+      b"Message to sign",
+      padding.PSS(
+          mgf=padding.MGF1(hashes.SHA256()),
+          salt_length=padding.PSS.MAX_LENGTH
+      ),
+      hashes.SHA256()
+  )
+  ```
+
+### 5. **Sérialisation des Clés**
+
+#### **Sérialisation de Clés RSA**
+
+- **Fonction**: Convertir les clés RSA en formats lisibles comme PEM.
+
+  ```python
+  from cryptography.hazmat.primitives import serialization
+
+  # Sérialisation de la clé privée
+  private_pem = private_key.private_bytes(
+      encoding=serialization.Encoding.PEM,
+      format=serialization.PrivateFormat.TraditionalOpenSSL,
+      encryption_algorithm=serialization.NoEncryption()
+  )
+
+  # Sérialisation de la clé publique
+  public_pem = public_key.public_bytes(
+      encoding=serialization.Encoding.PEM,
+      format=serialization.PublicFormat.SubjectPublicKeyInfo
+  )
+  ```
+
+### 6. **Fonctions de Clé et de KDF (Key Derivation Functions)**
+
+#### **PBKDF2 (Password-Based Key Derivation Function 2)**
+
+- **Fonction**: Générer une clé dérivée à partir d'un mot de passe.
+
+  ```python
+  from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+  from cryptography.hazmat.primitives import hashes
+  from cryptography.hazmat.backends import default_backend
+  import os
+
+  password = b"my_password"
+  salt = os.urandom(16)
+
+  kdf = PBKDF2HMAC(
+      algorithm=hashes.SHA256(),
+      length=32,
+      salt=salt,
+      iterations=100000,
+      backend=default_backend()
+  )
+  key = kdf.derive(password)
+  ```
+
+### 7. **Chiffrement de Flux**
+
+#### **ChaCha20**
+
+- **Fonction**: Chiffrement de flux utilisant l'algorithme ChaCha20.
+
+  ```python
+  from cryptography.hazmat.primitives.ciphers import algorithms, Cipher
+  from cryptography.hazmat.primitives.ciphers.modes import CTR
+  from cryptography.hazmat.backends import default_backend
+  import os
+
+  key = os.urandom(32)  # Clé ChaCha20 de 256 bits
+  nonce = os.urandom(16)  # Nonce ChaCha20
+
+  cipher = Cipher(algorithms.ChaCha20(key, nonce), mode=None, backend=default_backend())
+  encryptor = cipher.encryptor()
+  ciphertext = encryptor.update(b"Secret message") + encryptor.finalize()
+
+  # Déchiffrement
+  decryptor = cipher.decryptor()
+  plaintext = decryptor.update(ciphertext) + decryptor.finalize()
+  ```
+
+### **Résumé**
+
+Le module `cryptography` en Python fournit une variété de fonctionnalités cryptographiques :
+
+- **Chiffrement Symétrique**: AES.
+- **Chiffrement Asymétrique**: RSA.
+- **Hachage**: SHA-256.
+- **Signatures Numériques**: Signatures RSA.
+- **Sérialisation des Clés**: Convertir des clés en formats comme PEM.
+- **KDF**: PBKDF2 pour dériver des clés.
+- **Chiffrement de Flux**: ChaCha20.
+
+Ces fonctionnalités couvrent les besoins de base en cryptographie pour protéger et sécuriser les données dans les applications Python.
+Le module `cryptography` en Python fournit une vaste gamme de fonctionnalités pour la cryptographie, mais il ne fournit pas directement des fonctions spécifiques telles que "byte to long" comme certaines bibliothèques plus anciennes ou spécialisées. Cependant, il propose des outils pour manipuler des données binaires, effectuer des conversions et gérer des clés. Voici une vue d'ensemble des fonctionnalités pertinentes pour travailler avec des données binaires, la conversion de types et les opérations cryptographiques.
+
+### 1. **Conversion entre Bytes et Entiers**
+
+En Python, la conversion entre bytes et entiers n’est pas directement fournie par `cryptography`, mais peut être effectuée en utilisant les fonctions standard Python.
+
+#### **Conversion de Bytes en Entier**
+
+- **Méthode `int.from_bytes()`**
+
+  ```python
+  # Exemple de conversion de bytes en entier
+  byte_data = b'\x00\x01\x02\x03'
+  integer_value = int.from_bytes(byte_data, byteorder='big')
+  print(integer_value)  # Affiche: 66051
+  ```
+
+#### **Conversion d’Entier en Bytes**
+
+- **Méthode `int.to_bytes()`**
+
+  ```python
+  # Exemple de conversion d'entier en bytes
+  integer_value = 66051
+  byte_data = integer_value.to_bytes(4, byteorder='big')
+  print(byte_data)  # Affiche: b'\x00\x01\x02\x03'
+  ```
+
+### 2. **Manipulation de Clés et Sérialisation**
+
+Le module `cryptography` offre des fonctions pour gérer les clés cryptographiques et les sérialiser en différents formats. Cela est souvent utilisé pour sauvegarder ou transférer des clés.
+
+#### **Sérialisation des Clés**
+
+- **RSA**
+
+  ```python
+  from cryptography.hazmat.primitives import serialization
+  from cryptography.hazmat.primitives.asymmetric import rsa
+
+  # Générer une clé RSA
+  private_key = rsa.generate_private_key(
+      public_exponent=65537,
+      key_size=2048,
+  )
+
+  # Sérialisation de la clé privée
+  private_pem = private_key.private_bytes(
+      encoding=serialization.Encoding.PEM,
+      format=serialization.PrivateFormat.TraditionalOpenSSL,
+      encryption_algorithm=serialization.NoEncryption()
+  )
+
+  # Sérialisation de la clé publique
+  public_key = private_key.public_key()
+  public_pem = public_key.public_bytes(
+      encoding=serialization.Encoding.PEM,
+      format=serialization.PublicFormat.SubjectPublicKeyInfo
+  )
+  ```
+
+### 3. **Conversion entre Bytes et Hexadecimal**
+
+- **Bytes en Hexadecimal**
+
+  ```python
+  byte_data = b'\x00\x01\x02\x03'
+  hex_string = byte_data.hex()
+  print(hex_string)  # Affiche: '00010203'
+  ```
+
+- **Hexadecimal en Bytes**
+
+  ```python
+  hex_string = '00010203'
+  byte_data = bytes.fromhex(hex_string)
+  print(byte_data)  # Affiche: b'\x00\x01\x02\x03'
+  ```
+
+### 4. **Fonctions Cryptographiques Spécifiques**
+
+#### **Hachage**
+
+- **SHA-256**
+
+  ```python
+  from cryptography.hazmat.primitives import hashes
+
+  digest = hashes.Hash(hashes.SHA256())
+  digest.update(b"Message to hash")
+  hash_value = digest.finalize()
+  print(hash_value)  # Affiche le hash SHA-256 en bytes
+  ```
+
+#### **Chiffrement Symétrique (AES)**
+
+- **AES en Mode CFB**
+
+  ```python
+  from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+  import os
+
+  key = os.urandom(32)  # Clé AES de 256 bits
+  iv = os.urandom(16)   # IV de 128 bits
+
+  cipher = Cipher(algorithms.AES(key), modes.CFB(iv))
+  encryptor = cipher.encryptor()
+  ciphertext = encryptor.update(b"Secret message") + encryptor.finalize()
+
+  # Déchiffrement
+  decryptor = cipher.decryptor()
+  plaintext = decryptor.update(ciphertext) + decryptor.finalize()
+  ```
+
+### 5. **Conversion entre Formats de Clés**
+
+#### **Clés Symétriques**
+
+- **Génération et Conversion d’une Clé Symétrique**
+
+  ```python
+  from cryptography.hazmat.primitives.ciphers import algorithms
+  import os
+
+  # Générer une clé symétrique
+  key = os.urandom(32)  # Clé de 256 bits
+
+  # Convertir en hexadecimal
+  hex_key = key.hex()
+  print(hex_key)  # Affiche la clé en hex
+
+  # Convertir de hexadecimal en bytes
+  key_from_hex = bytes.fromhex(hex_key)
+  ```
+
+### Résumé
+
+- **Conversion entre bytes et entiers**: Utilisez `int.from_bytes()` et `int.to_bytes()` pour convertir entre bytes et entiers.
+- **Sérialisation des clés**: Utilisez les méthodes de sérialisation pour convertir des clés cryptographiques en formats tels que PEM.
+- **Conversion entre bytes et hex**: Utilisez `bytes.hex()` et `bytes.fromhex()` pour convertir entre bytes et chaînes hexadécimales.
+- **Fonctions cryptographiques spécifiques**: Le module `cryptography` fournit des outils pour le hachage, le chiffrement symétrique et la gestion des clés.
+
+Pour des opérations de base comme la conversion de types de données, vous utiliserez principalement les fonctionnalités intégrées de Python. Les fonctions cryptographiques avancées sont gérées par le module `cryptography`.
