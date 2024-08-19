@@ -23802,3 +23802,286 @@ Le schéma binaire simplifié d'un AOP à transistors illustre les principales �
 3. **Étape de Sortie** : Fournit le signal amplifié.
 
 Bien que le schéma soit simplifié pour des raisons de clarté, les circuits réels sont beaucoup plus complexes et incluent des éléments pour améliorer la stabilité, réduire le bruit, et augmenter la performance.
+Comparer deux tensions à l'aide de transistors implique de comprendre comment ces composants fonctionnent au niveau atomique et électronique. Voici une explication détaillée de ce processus, en partant des principes atomiques pour aboutir à la comparaison des tensions.
+
+### **1. Principe de Fonctionnement des Transistors**
+
+#### **a. Structure Atomique des Transistors**
+
+1. **Matériau Semi-Conducteur**:
+   - Les transistors sont fabriqués à partir de matériaux semi-conducteurs comme le silicium (Si). Le silicium a une structure cristalline en réseau où chaque atome de silicium est lié à quatre autres atomes par des liaisons covalentes.
+
+2. **Dopage**:
+   - Pour créer un transistor, le silicium est dopé avec d'autres éléments pour modifier ses propriétés électriques :
+     - **Dopage N** (ajout de donneurs d'électrons, comme le phosphore) crée une région avec des électrons en excès.
+     - **Dopage P** (ajout de accepteurs d'électrons, comme le bore) crée une région avec des "trous" (places manquantes pour des électrons).
+
+#### **b. Fonctionnement des Transistors**
+
+1. **Transistor Bipolaire à Jonction (BJT)**:
+   - **Structure**: Composé de trois régions dopées (émetteur, base, collecteur) :
+     - **Émetteur** (N ou P) : Source principale de porteurs de charge (électrons ou trous).
+     - **Base** (P ou N) : Région très mince qui contrôle le flux de porteurs de charge.
+     - **Collecteur** (N ou P) : Collecte les porteurs de charge.
+
+   - **Fonctionnement**:
+     - **Base** contrôle le courant entre l’émetteur et le collecteur. 
+     - La différence de potentiel entre la base et l'émetteur permet ou bloque le passage du courant. La base doit être légèrement positive par rapport à l’émetteur pour que le transistor soit "activé" (conducteur).
+
+2. **Transistor à Effet de Champ (FET)**:
+   - **Structure**: Composé de trois régions :
+     - **Source** (N ou P) : Fournit les porteurs de charge.
+     - **Drain** (N ou P) : Où les porteurs de charge sont collectés.
+     - **Grille** : Contrôle le passage des porteurs de charge entre la source et le drain.
+
+   - **Fonctionnement**:
+     - La tension appliquée à la grille modifie le champ électrique qui contrôle le flux de courant entre la source et le drain. La grille est isolée de la jonction source-drain, donc le courant est contrôlé par le champ électrique plutôt que par le passage direct des porteurs de charge.
+
+### **2. Comparaison des Tensions avec des Transistors**
+
+#### **a. Comparaison en Utilisant un Amplificateur Opérationnel comme Comparateur**
+
+1. **Configuration du Comparateur**:
+   - **Entrées**:
+     - **Entrée Non-Inverseuse (+)** : Connectée à l’une des tensions à comparer.
+     - **Entrée Inverseuse (-)** : Connectée à l’autre tension.
+
+2. **Fonctionnement**:
+   - Les transistors dans l'amplificateur opérationnel sont configurés pour créer une différence de potentiel très amplifiée entre les deux entrées.
+   - Lorsque la tension appliquée à l’entrée non-inverseuse est supérieure à celle de l’entrée inverseuse, le courant à travers les transistors change de manière significative, produisant une sortie haute.
+   - Lorsque l'entrée inverseuse est supérieure, la sortie est basse.
+
+**Vue Atomique de la Comparaison**:
+   - **Tension plus élevée**: Lorsque la tension sur une entrée est plus élevée, elle génère un champ électrique plus intense dans les régions dopées du transistor. Ce champ influence le mouvement des électrons ou des trous, modifiant ainsi le courant à travers le transistor.
+   - **Différence de Courant**: Les transistors dans l’amplificateur opérationnel permettent de détecter des petites différences de courant générées par des différences de tension. Cette différence est amplifiée pour produire un signal de sortie clair.
+
+#### **b. Comparaison Numérique avec des Transistors**
+
+- **Transistors Numériques**: Utilisés dans les circuits logiques pour comparer des niveaux binaires (0 ou 1).
+   - **Fonctionnement**: Des circuits logiques utilisant des transistors effectuent des comparaisons binaires basées sur des seuils de tension, en transformant les différences de tension en niveaux logiques.
+
+**Vue Atomique de la Comparaison**:
+   - **Niveaux Logiques**: Les transistors basculent entre des états de conduction et de blocage selon les tensions appliquées, produisant des niveaux logiques qui permettent la comparaison directe de bits (0 et 1).
+
+### **Résumé**
+
+- **Transistors et Matériaux Semi-Conducteurs**: Les transistors utilisent des propriétés atomiques et des champs électriques pour contrôler le courant.
+- **Comparaison des Tensions**: En utilisant des transistors, les circuits peuvent comparer les tensions en détectant les variations de courant causées par des différences de potentiel.
+- **Comparateurs et Amplificateurs Opérationnels**: Ces circuits utilisent des transistors pour amplifier les différences de tension, permettant de déterminer lequel des signaux est plus élevé.
+
+En utilisant ces principes, les transistors permettent des comparaisons précises de tensions, tant dans des contextes analogiques que numériques.
+Pour fabriquer un amplificateur opérationnel (AOP) à partir de transistors, il est essentiel de comprendre comment chaque composant contribue au fonctionnement global du circuit. Voici une explication détaillée du fonctionnement d'un AOP à transistors, étape par étape, en se concentrant sur les concepts fondamentaux et les principes de base.
+
+### **1. **Principe de Fonctionnement d'un Amplificateur Opérationnel (AOP) à Transistors
+
+Un amplificateur opérationnel (AOP) est un circuit intégré qui amplifie la différence de tension entre ses deux entrées. Les transistors sont les éléments clés qui réalisent cette amplification. Un AOP typique à transistors est basé sur un circuit à deux étages : le **différenciateur** et le **stage de sortie**.
+
+### **2. **Composants de Base**
+
+#### **a. Transistors Bipolaires (BJT)**
+
+1. **Transistor NPN**:
+   - **Émetteur** (E) : Émet des électrons.
+   - **Base** (B) : Contrôle le passage des électrons.
+   - **Collecteur** (C) : Collecte les électrons.
+
+2. **Transistor PNP**:
+   - **Émetteur** (E) : Émet des trous.
+   - **Base** (B) : Contrôle le passage des trous.
+   - **Collecteur** (C) : Collecte les trous.
+
+### **3. **Schéma Simplifié d'un AOP à Transistors**
+
+#### **a. Étape 1: Comparaison des Entrées**
+
+1. **Étape du Différenciateur**:
+   - **Transistors Q1 et Q2** : Agissent comme des amplificateurs différentiels. Ils comparent les tensions appliquées aux entrées non-inverseuse (+) et inverseuse (-).
+
+   **Schéma**:
+
+   ```
+       Entrée (+)
+           |
+           |
+         [Q1]
+           |
+           +--- Collecteur
+           |
+         [Q2]
+           |
+       Entrée (-)
+   ```
+
+   - **Q1 et Q2** : Les deux transistors NPN sont configurés pour amplifier la différence entre les tensions aux entrées. 
+
+#### **b. Étape 2: Amplification**
+
+2. **Stage de Sortie**:
+   - **Transistor Q3 et Q4** : Amplifient encore le signal. Le signal amplifié est envoyé à la sortie.
+
+   **Schéma**:
+
+   ```
+     Collecteur de Q1
+         |
+         +---[Q3]--- Sortie
+         |
+     Collecteur de Q2
+         |
+         +---[Q4]
+   ```
+
+   - **Q3 et Q4** : Transistors configurés pour renforcer le signal amplifié par Q1 et Q2.
+
+### **4. **Fonctionnement Détail**
+
+1. **Comparaison des Signaux**:
+   - **Entrée (+)** et **Entrée (-)** : Les signaux sont appliqués aux bases des transistors Q1 et Q2.
+   - La différence de potentiel entre ces entrées modifie le courant dans les transistors Q1 et Q2.
+
+2. **Amplification Différentielle**:
+   - **Q1 et Q2** amplifient la différence de tension entre les entrées.
+   - **Le courant dans les collecteurs de Q1 et Q2** varie en fonction de la différence de tension, produisant un signal différent entre leurs collecteurs.
+
+3. **Amplification Finale**:
+   - **Q3 et Q4** sont configurés pour augmenter encore le signal amplifié et fournir une sortie plus élevée.
+   - **Le signal à la sortie** est proportionnel à la différence entre les tensions d'entrée.
+
+### **5. **Exemple de Circuit**
+
+Voici un exemple de schéma simplifié d'un AOP à transistors pour visualiser le concept :
+
+![Schéma AOP à Transistors](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Operational_amplifier_in_a_basic_inverting_amplifier_circuit.png/1200px-Operational_amplifier_in_a_basic_inverting_amplifier_circuit.png)
+
+*Image d’un circuit amplificateur opérationnel inversé, adapté pour comprendre les connexions des transistors dans un AOP.*
+
+### **6. **Construction du Circuit**
+
+1. **Étape 1** : Créez les deux étages de transistors pour la comparaison et l’amplification.
+2. **Étape 2** : Connectez les transistors en suivant le schéma pour les différentes étapes.
+3. **Étape 3** : Testez le circuit en appliquant différentes tensions aux entrées pour vérifier l’amplification et la réponse.
+
+### **Résumé**
+
+- **Transistors** : Utilisés pour amplifier les différences de tension entre les entrées.
+- **Étages de Circuit** : Comprennent la comparaison des signaux et l’amplification finale.
+- **Schémas et Connexions** : Essentiels pour construire un AOP fonctionnel à partir de transistors.
+
+En suivant ces principes et en utilisant les schémas comme guide, vous pouvez concevoir et fabriquer un amplificateur opérationnel avec des transistors, tout en expérimentant et ajustant les paramètres pour optimiser les performances du circuit.
+Voici une explication détaillée d'un circuit pratique, l'amplificateur non-inverseur à transistor, avec une description du rôle de chaque composant. Ce type de circuit amplifie un signal d'entrée en utilisant un transistor bipolaire à jonction (BJT) en configuration émetteur commun.
+
+### **Circuit : Amplificateur Non-Inverseur à Transistor**
+
+#### **Schéma du Circuit**
+
+```
+                +Vcc
+                 |
+                 |
+                 R2
+                 |
+                 +--- Collecteur (C) - Q1 (NPN) - Sortie
+                 |        |
+                 |        |
+                 R1       |
+                 |        |
+                 |       Émetteur (E)
+                 |        |
+                GND      GND
+
+                Entrée (Signal) - Base (B) - Résistance de Base
+```
+
+#### **Documentation des Composants**
+
+1. **Transistor Q1 (NPN)**
+
+   - **Fonction** : Amplifie le signal d'entrée. C'est le composant principal de l'amplificateur.
+   - **Connexions** :
+     - **Base (B)** : Connectée au signal d'entrée via la résistance de base (R1). La tension appliquée à la base contrôle le courant entre le collecteur et l'émetteur.
+     - **Émetteur (E)** : Connecté à la masse (GND). C'est le point de retour pour le courant amplifié.
+     - **Collecteur (C)** : Connecté à la charge et à la résistance de charge (R2). Le signal amplifié est pris au collecteur.
+
+   **Rôle** :
+   - **Amplification** : Le transistor augmente l'amplitude du signal d'entrée. La variation de courant dans le collecteur (C) est proportionnelle à la variation de tension appliquée à la base (B).
+
+2. **Résistance de Base (R1)**
+
+   - **Valeur Typique** : Entre 10 kΩ et 100 kΩ.
+   - **Fonction** : Limite le courant de base pour protéger le transistor et définir le point de fonctionnement du transistor.
+   - **Connexion** : Connectée entre la base du transistor (Q1) et le signal d'entrée.
+
+   **Rôle** :
+   - **Protection** : Empêche un courant excessif de traverser la base, ce qui pourrait endommager le transistor.
+   - **Contrôle** : Ajuste le gain du transistor en modifiant le courant de base.
+
+3. **Résistance de Charge (R2)**
+
+   - **Valeur Typique** : Entre 1 kΩ et 10 kΩ.
+   - **Fonction** : Détermine la charge sur le collecteur du transistor et influence l'amplitude du signal de sortie.
+   - **Connexion** : Connectée entre le collecteur du transistor (Q1) et la source de tension positive (+Vcc).
+
+   **Rôle** :
+   - **Détermination du Gain** : Influence le gain de l'amplificateur en déterminant la tension de sortie disponible.
+   - **Contrôle du Courant** : Ajuste le courant qui circule à travers le collecteur du transistor.
+
+4. **Source de Tension (+Vcc)**
+
+   - **Valeur Typique** : Entre 5V et 15V, selon les besoins du circuit.
+   - **Fonction** : Fournit la tension nécessaire pour le fonctionnement du transistor et le circuit.
+   - **Connexion** : Connectée à la résistance de charge (R2).
+
+   **Rôle** :
+   - **Alimentation** : Assure que le transistor peut fonctionner correctement en fournissant la tension nécessaire pour l’amplification.
+
+5. **Masse (GND)**
+
+   - **Fonction** : Sert de point de référence pour toutes les tensions dans le circuit et permet le retour du courant.
+   - **Connexion** : Connectée à l'émetteur du transistor (Q1) et à d'autres parties du circuit.
+
+   **Rôle** :
+   - **Référence de Tension** : Définit la référence zéro pour toutes les autres tensions dans le circuit.
+   - **Retour de Courant** : Permet au courant amplifié de revenir au circuit.
+
+6. **Entrée (Signal)**
+
+   - **Fonction** : Le signal à amplifier est appliqué à la base du transistor via la résistance de base (R1).
+   - **Connexion** : Connectée à la base du transistor à travers R1.
+
+   **Rôle** :
+   - **Signal d'Entrée** : Apporte le signal à amplifier, qui sera ensuite amplifié par le transistor.
+
+7. **Sortie**
+
+   - **Fonction** : Le signal amplifié est récupéré au collecteur du transistor.
+   - **Connexion** : La sortie du circuit est prélevée au niveau du collecteur de Q1.
+
+   **Rôle** :
+   - **Signal Amplifié** : Fournit le signal de sortie amplifié prêt à être utilisé par d'autres parties du circuit.
+
+### **Fonctionnement du Circuit**
+
+1. **Application du Signal d'Entrée** :
+   - Le signal d'entrée est appliqué à la base du transistor (Q1) via la résistance de base (R1). La tension de base contrôle le courant qui circule entre le collecteur et l'émetteur.
+
+2. **Amplification** :
+   - Le transistor Q1 amplifie le signal d'entrée. Le courant du collecteur (C) est proportionnel à la tension appliquée à la base (B). Cette amplification produit un signal de sortie plus grand au collecteur.
+
+3. **Sortie du Signal** :
+   - La sortie amplifiée est obtenue au collecteur du transistor, après avoir traversé la résistance de charge (R2). La résistance de charge détermine l’amplitude du signal amplifié disponible à la sortie.
+
+4. **Polarisation du Transistor** :
+   - La résistance de base (R1) assure que le transistor fonctionne en mode actif pour l’amplification. La résistance de charge (R2) permet que le signal amplifié soit disponible à la sortie, en ajustant le courant à travers le collecteur.
+
+### **Exemple de Valeurs Typiques**
+
+- **Transistor** : 2N2222 (NPN)
+- **R1** : 10 kΩ
+- **R2** : 1 kΩ
+- **+Vcc** : 12V
+
+### **Résumé**
+
+Ce circuit pratique montre comment un transistor NPN peut être utilisé pour amplifier un signal. Les composants sont configurés pour permettre au transistor de fonctionner efficacement en amplifiant le signal d'entrée et produisant une sortie amplifiée. En ajustant les valeurs des résistances et la tension d'alimentation, vous pouvez adapter le circuit à différents besoins d'application.
+
+Pour une compréhension plus visuelle, vous pouvez utiliser des outils de simulation de circuits en ligne, comme **LTspice** ou **CircuitLab**, pour construire et tester ce circuit virtuellement avant de le réaliser physiquement.
